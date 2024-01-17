@@ -1,27 +1,8 @@
-%%
-%% This is file `odesandpdes.sty',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% odesandpdes.dtx  (with options: `package')
-%% ----------------------------------------------------------------
-%% odesandpdes --- A package for the streamlining of the use of
-%% odes and pdes in mathematical texts typset by LaTeX
-%% 
-%% E-mail: anakin@ruc.dk
-%% Released under the LaTeX Project Public License v1.3c or later
-%% See http://www.latex-project.org/lppl.txt
-%% ----------------------------------------------------------------
-%% 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{odesandpdes}[2024/01/11 v0.9.5 For streamlining ODE and PDE usage]
-
-
-^^A %  \PrintIndex
-\RequirePackage{xkeyval}
+\ProvidesPackage{odesandpdes}[2024/01/04 v1.0.0 For streamlining ODE and PDE usage]
+\RequirePackage{xkeyval}    % Taking in keys for option inputs
 \newcount\m@rkings%
-\newcount\expo@de%
+\newcount\expo@de\relax%
 \countdef\@detempv@l=255%
 \newtoks\l@wert@ks%
 \newtoks\upp@rt@ks%
@@ -31,86 +12,85 @@
 \newbox\@deresb@x%
 \providecommand\@de@option{Leib}
 \DeclareOptionX{notation}[default]%
-    {\def\@de@option{\csname @de@not@#1\endcsname}}%
-\def\@de@not@Lagrange{Lagr}
-\def\@de@not@Leibniz{Leib}
-\def\@de@not@Newton{Newt}
-\let\@de@not@default\@de@not@Leibniz
+    {\def\@de@option{\csname @denot@tion@#1\endcsname}}%
+\def\@denot@tion@Lagrange{Lagr}
+\def\@denot@tion@Leibniz{Leib}
+\def\@denot@tion@Newton{Newt}
+\let\@denot@tion@default\@denot@tion@Leibniz
+
 \DeclareOptionX{maxprimes}[3]%
     {\m@rkings=#1\advance\m@rkings1}%
+
 \DeclareOptionX*{\PackageWarning{odesandpdes}{`\CurrentOption' ignored}}
+
 \ExecuteOptionsX{notation,maxprimes}
 \ProcessOptionsX\relax
+
+
 \define@key[package]{@de}{notation}%
-    {\def\@de@option{\csname @de@not@#1\endcsname}}
+    {\def\@de@option{\csname @denot@tion@#1\endcsname}}%
 \define@key[package]{@de}{maxprimes}%
-    {\m@rkings=#1\advance\m@rkings1}
+    {\m@rkings=#1\advance\m@rkings1}%
 \newcommand\setDE[1]%
     {\setkeys[package]{@de}{#1}}
-\@ifpackageloaded{amsmath}{
+
+
+\@ifpackageloaded{amsmath}{% Purely because amsmath is a bitch
     \let\@de@ver=\@@over%
     \let\@de@top=\@@atop%
-    \let\@de@bove=\@@above}%
-    {\let\@de@ver=\over%
+    \let\@de@bove=\@@above%
+    }{% Otherwise just uses the tex pr\@de@expony@inkimitives
+    \let\@de@ver=\over%
     \let\@de@top=\atop%
-    \let\@de@bove=\above}
-\def\d@@{\mathrm d}
-\let\d@l=\partial
+    \let\@de@bove=\above%
+    }
+
+
+\def\d@@{\mathrm d} %  Protected def for the d
+\let\d@l=\partial   %  Protected def for the del
 \def\@dem@rkst@red{st@r@d}
 \def\@dem@rkn@st@r{n@st@r}
+
 \def\ode{\let\@de@perat@r=\d@@% sets the d
     \@de@ifst@r}
 \def\pde{\let\@de@perat@r=\d@l% sets the del
     \@de@ifst@r}
-\def\@de@ifst@r{\@deifnextch@r * \@dest@red@rg \@den@st@r@rg}
-\def\@de@ifbr@ck{\@deifnextch@r [ \@de@ption@l@rg {\@de@ption@l@rg[t]}}
-\def\@de@ifexpon{\@deifnextch@r ^ \@de@exponent@rg {\@de@exponent@rg^1}}
-\def\@de@ifindex{\@deifnextch@r _ \@de@index@rg \@de@noindex@rg}
-\def\@deif@tpos{\@deifnextch@r a \@de@tfinder \@definalchosenform}
-\def\@de@tfinder a#1{\ifx#1t\expandafter\@de@tom@at\else
-    \@definalchosenform a#1\fi}%
+\def\@de@ifst@r{\@deifnextch@r* \@dest@red@rg \@den@st@r@rg}%
 \def\@dest@red@rg*{\@de@isst@r{st@r@d} \@de@ifbr@ck}
 \def\@den@st@r@rg {\@de@isst@r{n@st@r} \@de@ifbr@ck}
+
+\def\@de@ifbr@ck{\@deifnextch@r[\@de@ption@l@rg{\@de@ption@l@rg[t]}}
 \def\@de@ption@l@rg[#1]{\expandafter\l@wert@ks{#1}\relax \@de@ifexpon}%
+\def\@de@ifexpon{\@deifnextch@r^\@de@exponent@rg{\@de@exponent@rg^1}}
+
 \def\@de@exponent@rg^#1{\expo@de#1\relax \@deisitorisntitastar}
-\def\@de@index@rg_#1{#1\relax \@deisitorisntitastar}
-\def\@de@noindex@rg{\relax \@deisitorisntitastar}
-\def\@dest@r@dy@ink{\expandafter\@definalchosenform}
-\def\@den@st@ry@ink{\expandafter\@de@y@inkf@rm}
-\def\@de@func@Leib{\expandafter\@defuncg@bbler}
-\def\@de@func@ther#1{\expandafter\upp@rt@ks{#1}\relax \@deif@tpos}
+
+\def\@dest@r@dfuncy@ink{\expandafter\@definalchosenform}
+\def\@den@st@rfuncy@ink{\expandafter\@de@funcy@inkf@rm}
+
+\def\@de@func@Leib#1 {\expandafter\upp@rt@ks{#1}\relax \@deif@tpos}
+\def\@de@func@ther #1{\expandafter\upp@rt@ks{#1}\relax \@deif@tpos}
 \let\@de@func@Lagr\@de@func@ther
 \let\@de@func@Newt\@de@func@ther
-\def\@defuncg@bbler#1{\beginnext%
-    \toks0={\the\upp@rt@ks#1}
-    \edef\next{\upp@rt@ks=\expandafter{\the\toks0}}
-    \endnext\@deifnotsp@ce}
-\def\@deifnotsp@ce{%
-    \futurelet\@detesttoken\@deleibsp@cemucher}
-\def\@deleibsp@cemucher{%
-    \ifx\@detesttoken\@sptoken%
-        \expandafter\@deif@tpos\else%
-        \expandafter\@defuncg@bbler\fi}
-\def\toksloadcsexpansion#1\to#2{%
-    #2=\expandafter{#1}}
-\def\tokscat#1&#2\to#3{%
-    \beginnext
-    \edef\tokscat@a{\the#1\the#2}%
-    \toks2={#3}%
-    \toksloadcsexpansion\tokscat@a
-    \to{\toks4}%
-    \edef\next{\the\toks2={\the\toks4}}%
-    \endnext}
-    
-\def\beginnext{\begingroup
-    \let\next\undefined}
-\def\endnext{\expandafter\endgroup\next}
+
+\def\@deif@tpos{\@deifnextch@r{a}\@de@tfinder \@definalchosenform}
+
+\def\@de@tfinder a#1{\ifx#1t\expandafter\@de@tom@at\else
+    \@definalchosenform a#1\fi}%
+
+
+\def\@de@tom@def#1{\def\@de@tom@part{\csname @de@tom@#1\endcsname}}
+\def\@de@tom@optional[#1]{\expandafter\l@wert@ks{#1}\relax}
+\def\@de@tom@at#1;{\expandafter\@tpost@ks{#1}\relax \@de@t@posf@rm}
+\def\@de@tom@function #1{\expandafter\upp@rt@ks{#1}\relax}
+\def\@de@tom@exponent ^#1{\expo@de=#1\relax}
+
+
 \def\@de@isst@r#1{%
-    \def\@deisitorisntitastar{\csname @de#1y@ink\endcsname}%
+    \def\@deisitorisntitastar{\csname @de#1funcy@ink\endcsname}%
     \def\@definalchosenform{\csname#1@\@de@option\endcsname}}
 \def\@de@t@posf@rm{\csname @de@tpl@ce@\@de@option\endcsname}%
-\def\@de@y@inkf@rm{\csname @de@func@\@de@option\endcsname}%
-\def\@de@tom@at#1;{\expandafter\@tpost@ks{#1}\relax \@de@t@posf@rm}
+\def\@de@funcy@inkf@rm{\csname @de@func@\@de@option\endcsname}%
 
 \def\@deifnextch@r#1#2#3{
     \let\@dedesiredtoken=#1\relax
@@ -215,25 +195,3 @@
 \def\@derele@se{\noexpand{\box\@deresb@x}}
 
 \let\<\@desavedef
-%% File: odesandpdes.dtx
-%% 
-%% Copyright (C) 2024 by Your Name Here <you@yournamehere.org>
-%% -----------------------------------------------------------
-%% 
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License (LPPL), either
-%% version 1.3c of this license or (at your option) any later
-%% version.  The latest version of this license is in the file:
-%% 
-%% http://www.latex-project.org/lppl.txt
-%% 
-%% This work is "maintained" (as per LPPL maintenance status) by
-%% You.
-%% 
-%% This work consists of the file  odesandpdes.dtx
-%% and the derived files           odesandpdes.ins,
-%%                                 odesandpdes.pdf and
-%%                                 odesandpdes.sty.
-%% 
-%%
-%% End of file `odesandpdes.sty'.

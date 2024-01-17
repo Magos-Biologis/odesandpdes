@@ -2,10 +2,6 @@
 odesandpdes --- A package for the streamlining of the use of
 odes and pdes in mathematical texts typset by LaTeX
 
-E-mail: anakin@ruc.dk
-Released under the LaTeX Project Public License v1.3c or later
-See http://www.latex-project.org/lppl.txt
-
 ----------------------------------------------------------------
 
 This package is the solution no one asked for, to a problem

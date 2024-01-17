@@ -1,0 +1,284 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{odesandpdes}[2023/12/29. Personal style file for dealing with the nuances of ordinary and partial differential notations, optimized for general usage. Anakin made it]
+% =============================================
+\RequirePackage{etoolbox}   % Includes a lot of useful macros for customizations
+\RequirePackage{xkeyval}    % Taking in keys for option inputs
+% =============================================
+
+% Number registries
+\newcount\m@rkings%
+\newcount\@xpon@de%
+\countdef\@de@temp=255%
+
+\newtoks\@dest@r%
+\newtoks\@de@t%
+
+\newbox\@deb@x\relax
+
+% =============================================
+% Package options
+% =============================================
+
+% This defines the package option for notational styles
+% Important to note that defining 
+% the command is not the same as using the command
+\providecommand\@de@option{Leib} 
+% Creating a key system for options
+% The pre-defined ones will be defined afterwards
+\DeclareOptionX{notation}[default]%
+    {\def\@de@option{\csname @denot@tion@#1\endcsname}}%
+% Pre-defined styles
+\def\@denot@tion@Lagrange{Lagr}
+\def\@denot@tion@Leibniz{Leib}
+\def\@denot@tion@Newton{Newt}
+\let\@denot@tion@default\@denot@tion@Leibniz
+
+% This defines the package option for how many primes is okay
+\DeclareOptionX{maxprimes}[3]%
+    {\m@rkings=#1\advance\m@rkings1}%
+
+    
+\DeclareOptionX*{\PackageWarning{odesandpdes}{`\CurrentOption' ignored}}
+
+% % Keys provided;
+\define@key[@de]{components}{opera}        {\def\@pera@de{#1}}
+\define@key[@de]{components}{lower}     [t]{\def\l@wer@de{#1}}
+\define@key[@de]{components}{upper}[\empty]{\def\upp@r@de{#1}}
+\define@key[@de]{components}{expon}     [0]{\@xpon@de=#1}
+ 
+\ExecuteOptionsX{notation,maxprimes}
+\ProcessOptionsX\relax
+
+% =============================================
+% Package option commands
+% =============================================
+
+% Macro for notation style option to be used by \setDE
+\define@key[package]{@de}{notation}%
+    {\def\@de@option{\csname @denot@tion@#1\endcsname}}%
+% Macro for number of primes to be used by \setDE
+\define@key[package]{@de}{maxprimes}%
+    {\m@rkings=#1\advance\m@rkings1}%
+% Macro for switching of the style mid-document
+\newcommand\setDE[1]%
+    {\setkeys[package]{@de}{#1}}
+
+% =============================================
+% To not conflict with amsmath
+% =============================================
+
+\@ifpackageloaded{amsmath}{% Purely because amsmath is a bitch
+    \let\@de@ver=\@@over%{ % Lets the \over be the same as amsmath's 
+    \let\@de@top=\@@atop%{ % Lets the \atop be the same as amsmath's 
+    \let\@de@bove=\@@above%{ % Lets the \above be the same as amsmath's 
+    }{%
+    \let\@de@ver=\over%    Otherwise just uses the tex primitives 
+    \let\@de@top=\atop% 
+    \let\@de@bove=\above% 
+    }
+
+% =============================================
+% Foundational macros
+% =============================================
+
+\def\d@@{\mathrm d} %  Protected def for the d
+\let\d@l=\partial   %  Protected def for the del
+
+% Macros for ODEs
+\def\ode{%
+    \let\@pr@=\d@@% sets the d
+    \@deintern@l% repeated internal structure
+    }
+% Macro for PDEs
+\def\pde{%
+    \let\@pr@=\d@l% sets the del
+    \@deintern@l% repeated internal structure     
+    }
+
+% Macro for the internal assignments of \ode and \pde notion + star
+\def\@deintern@l{%  
+    \@ifstar{%    LaTeX macro/primitive, checks for a star
+        \def\whichf@rm{st@r@d@}% If star
+        \ifbr@ket@de%
+        }{%
+        \def\whichf@rm{n@st@r@}% Ifn't star
+        \ifbr@ket@de%
+        }%
+    }
+% Macro for checking for the bracket to denote optional
+\def\ifbr@ket@de{\futurelet\testch@r\@de@pti@n@l@rg}
+\def\@de@pti@n@l@rg{%
+    \ifx[\testch@r%
+        \expandafter\@pti@n@l@rg@de\else%     if bracket
+        \expandafter\n@@pti@n@rg@de\fi}%   ifn't bracket
+% Macros for optional and no optional args 
+\def\@pti@n@l@rg@de{\@def@rm\@pr@}%       argument for optional arg
+\def\n@@pti@n@rg@de{\@def@rm\@pr@[\mkern1mu t]}%    argument for no option
+% Macro for stiching together the ODEs
+\def\@def@rm#1[#2]{%
+    \setkeys[@de]{components}% Stores values to keyvalue macros
+        {opera=#1,lower={#2}}%
+    \ifnum\@xpon@de=0\@xpon@de=1\fi% If expon is zero, make one mark
+    \expandafter\ifexp@nent@de}% checks to see if the command has an exponent
+    
+
+% Macro for finding and removing the exponent
+\def\ifexp@nent@de{\futurelet\testch@r\@deexp@nent@rg}
+\def\@deexp@nent@rg{% the exponent checker
+    \ifx^\testch@r%
+        \expandafter\@xpon@nty@ink\else% if exponent
+        \expandafter\@dest@rring\fi}% ifn't exponent
+% Macro for yoinking the exponent
+\def\@xpon@nty@ink^#1{% Yoinks the exponent
+    \@xpon@de#1% Assigns exponent to registry
+    \expandafter\@dest@rring}% Makes the form
+\def\myexp@nent#1{%
+    \bgroup\aftergroup\egroup%
+    }
+    
+    % Macro for finding out if should use odeat notation
+\def\if@de@t{\futurelet\testch@r\@twhere} 
+\def\@twhere{\expandafter\if a\testch@r%
+    \expandafter\@de@tingfun\else%
+    \noexpand{\box9}\fi}%  
+% Same as \@def@rmch@@se, just for the odeat parameter
+\def\@dest@rring{\@def@rmch@@se\whichf@rm}%
+\def\@de@tingfun{\@def@rmch@@se{@de@t@}}%
+% Used for choosing which notational form to take
+\def\@def@rmch@@se#1{\csname#1\@de@option\endcsname} 
+
+% \def\@tpl@ceLieb{%
+%     }% expands into a notation command
+% \def\@de@t@{@de@t@}
+
+% =============================================
+% TeXbook's \futurenonspacelet
+% =============================================
+
+% \def\futurenonspacelet#1{\def\cs{#1}%
+%     \afterassignment\stepone\let\nexttoken= }
+% \def\\{\let\stoken= } \\ % now stoken is a space token
+% \def\stepone{\expandafter\futurelet\cs\steptwo}
+% \def\steptwo{\expandafter\ifx\cs\stoken\let\next=\stepthree\else\let\next=\nexttoken\fi \next}
+% \def\stepthree{\afterassignment\stepone\let\next= }
+
+% =============================================
+% Notational shaping time
+% =============================================
+
+% Macro for Lagr+star
+\def\st@r@d@Lagr{%
+    \setbox9=\hbox{$f^{\mkern1mu\m@kem@rk\lagr@prime\lagr@prime\br@ced@xpon}_{\m@kep@rtLagr}%
+    \mkern-0.5mu\left(\l@wer@de\right)$}%
+    \noexpand{\box9}%
+    }%
+% Macro for Lagr
+\def\n@st@r@Lagr#1{%
+    \setkeys[@de]{components}{upper={#1}}%
+    \setbox9=\hbox{$\upp@r@de^{\mkern1mu\m@kem@rk\lagr@prime\lagr@prime\br@ced@xpon}_{\m@kep@rtLagr}$}%
+    \if@de@t%
+    }%
+% Macro for Lagr at point
+\def\@de@t@Lagr at #1;{%
+    \noexpand{\box9}%
+    }%
+
+% Macro for the prime used by the lagrangian notation
+\def\lagr@prime{\mkern0.35mu\prime\global\advance\@xpon@de-1}
+% Macro for making the exponent in parenthesis
+\def\br@ced@xpon{\left(\the\@xpon@de\right)}
+% Macro for Lagrange partial notations
+\def\m@kep@rtLagr{\ifx\@pr@\d@l\l@wer@de\else\empty\fi}
+
+
+    
+%  Macro for Leib+star
+\def\st@r@d@Leib{%
+    \displaystyle%
+    \setbox2=\hbox{$\mkern0.40mu\@pera@de^{\empty@rexpon}$}%
+    \setbox5=\hbox{$\@pera@de\mkern0.70mu\l@wer@de^{\empty@rexpon}$}%
+    \setbox9=\hbox{$\mathop{\raise2pt\box2\@de@ver\lower6pt\box5}$}% 
+    \noexpand{\box9}%
+    }%
+%  Macro for Leib
+\def\n@st@r@Leib#1 {%  
+    \setkeys[@de]{components}{upper={#1}}%
+    \displaystyle%
+    \setbox2=\hbox{$\mkern0.40mu\@pera@de^{\empty@rexpon}\upp@r@de$}%
+    \setbox5=\hbox{$\@pera@de\mkern0.40mu\l@wer@de^{\empty@rexpon}$}%
+    \setbox9=\hbox{\kern0.50pt$\raise2pt\box2\@de@ver\lower6pt\box5$\kern0.50pt}%
+    \if@de@t%
+    }%
+% \def{\csname\whichf@rm\@de@ption\endcsname}
+% Macro for specification of where the ode is defined
+% Uses the same trick that tikz does for identifying the end of an input
+\def\@de@t@Lieb at #1;{%
+    \left.\noexpand{\box9}\mkern-0.4mu\right|_{%
+        \mkern1mu\hbox{${\displaystyle\l@wer@de\mkern2mu}$\rlap{$\scriptstyle=\mkern2mu #1 $}}%
+        }
+    }%
+
+
+%  Macro for Newt+star
+\def\st@r@d@Newt{% 
+    \setbox2=\vbox{%
+        \baselineskip=0pt\lineskip=-1pt%
+        \m@kem@rk\@ned@ts\tw@d@ts\newt@nd@t}%
+    \setbox5=\hbox{$\displaystyle x$}%
+    \setbox9=\hbox{$\raisebox{0ex}[0ex][0ex]{\raisebox{0.25ex}[0ex][0ex]{\box2}}%
+    \@de@top%
+    \raisebox{0ex}[0ex][0ex]{\raisebox{1ex}[0ex][0ex]{\box5}}$}%
+    \noexpand{\box9}%
+    }%
+%  Macro for Newt
+\def\n@st@r@Newt#1{% 
+    \setkeys[@de]{components}{upper={#1}}%
+    \setbox2=\vbox{%
+        \baselineskip=0pt\lineskip=-1pt%
+        \m@kem@rk\@ned@ts\tw@d@ts\newt@nd@t}%
+    \setbox5=\hbox{$\displaystyle\upp@r@de$}%
+    \setbox9=\hbox{$%
+        \raisebox{0ex}[0ex][0ex]{\raisebox{0.75ex}[0ex][0ex]{\box2}}%
+        \@de@top%
+        \raisebox{0ex}[0ex][0ex]{\raisebox{1ex}[0ex][0ex]{\box5}}$}%
+    \if@de@t%
+    }%
+% Macro for Newton at point
+\def\@de@t@Newt at #1;{%
+    \noexpand{\box9}%
+    }%
+% Macro for numbering
+\def\newt@nd@t{\hbox{$%
+    \raise0.00pt\hbox{$\scriptscriptstyle\empty@rexpon$}%
+    \@de@top%
+    \raise5.00pt\hbox{$\displaystyle\cdot$}$}}%
+% Macro for Netwon partial notations
+\def\m@kep@rtNewt{\ifx\@pr@\d@l\empty\fi}
+% Macro for dots
+% Tests as "mod2" testing of dot groupings
+\def\tw@d@ts{%
+    \ifnum\@xpon@de>1%
+        \advance\@xpon@de-2\hbox{$\cdot\mkern0.25mu\cdot$}\fi}%    
+\def\@ned@ts{%
+    \@de@temp=\the\@xpon@de%
+    \loop\ifnum\@de@temp>2%
+        \advance\@de@temp-2\repeat%
+    \ifnum\@de@temp=1%
+        \advance\@xpon@de-1\hbox{$\mkern3mu\cdot\mkern3mu$}\fi}%    
+    
+% =============================================
+% Notational tools
+% =============================================
+    
+% Macro for determining if the exponent should be empty
+\def\empty@rexpon{\ifnum2>\@xpon@de\empty\else\the\@xpon@de\fi}
+% Macro for checking if marks should be used or something else
+\def\m@kem@rk#1#2#3{%
+    \ifnum\@xpon@de<\m@rkings% If not zero, check if less than max allowed
+        #1\m@rkrepe@ting#2\else% Make primes while below limit
+        #3\fi}
+% Macro for creating the appropriate number of marks, primes or whatever 
+\def\m@rkrepe@ting#1{\loop\ifnum\@xpon@de>0#1\repeat}
+
+% =============================================
+\endinput

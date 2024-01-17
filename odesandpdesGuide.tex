@@ -1,0 +1,287 @@
+\documentclass[a4paper,11pt]{ltxdoc}
+% ========================= Preamble Packages 
+
+\usepackage[%
+    a4paper, centering,%
+    vscale = 0.80, hscale = 0.75,%
+    ]{geometry}
+
+\usepackage{verbatim}
+
+\usepackage{mathptmx}
+\usepackage{fdsymbol}
+\usepackage{odesandpdes}
+
+\usepackage{tikz}
+\usetikzlibrary{graphs}
+
+\begin{document}
+
+\section*{My funny little ODE/PDE package}
+\vspace{1em}
+Start by first having \verb|odesandpdes.sty| downloaded in an accessible directory, or in the same directory as your overleaf main.tex, using it by inserting; 
+\begin{verbatim}
+\usepackage{odesandpdes}
+\end{verbatim}
+into the preamble, Ideally after amsmath/mathtools. There are a couple notation options, which can be set document-wide with; 
+\begin{verbatim}
+\usepackage[notation=<option>]{odesandpdes}|
+\end{verbatim}
+
+
+The options included are based off of the three most common notations (according to Wikipedia), Lagrange, Leibniz, and Newton. 
+However, if you wish to change it on a section to section basis, the command \cs{setDE\{\emph{notation}=\meta{option}\}} will change the form of the subsequent uses.
+
+% %
+% \vspace{1em}
+
+\begin{macro}{\ode}
+\begin{macro}{\ode*}
+The command(s) are approached with the philosophy of of an intuitive and modular usage. The general form can be understood as;\par
+% \begin{macrocode}
+% % \newcounter{myCounter}
+% \end{macrocode}
+
+\noindent
+\verb|\ode[<variable>]<exponent>{<function>}| \newline
+\verb|\ode*[<variable>]<exponent>| 
+\end{macro}
+\end{macro}
+
+
+
+
+\begin{macro}{\pde}
+\begin{macro}{\pde*}
+\verb|\pde[<variable>]<exponent>{<function>}| \newline
+\verb|\pde*[<variable>]<exponent>| 
+\end{macro}
+\end{macro}
+
+{And the starred varients which allow one to omit the function}\newline
+
+
+\vspace{1em}
+\begin{center}
+\tikz[every node/.style = {draw}]
+  \graph[grow right sep, left anchor=east, right anchor=west, branch down sep]%
+  { ode -> star -> option -> exponent -> function };
+
+\tikz%
+  \graph[grow down sep, left anchor=south east, right anchor=north west, branch right sep]{
+    % \graph[simple, layered layout]{%
+    ode -> {
+    star -> {
+      takes function arg,
+      does not take function arg
+    },
+    option,
+    exponent -> {
+      grand child 3
+    },
+    function
+  }
+};
+\end{center}
+
+%
+While this should be sufficient for most use, there are a couple of tricks incorporated into the mechanism that makes this package better than the generic \cs{newcommand*\cs{ode}[2][t]\marg{\ldots}}\\
+Including automatic assignment of degree and starred variants. Example;
+\begin{verbatim}
+\begin{align*}
+\ode N(t) = N(t) * t && \ode N(t,x) = N(t,x) + \ode[x]^2 N(t,x) && \pde^2 f^2
+\end{align*}
+\end{verbatim}
+
+\vspace{-1em}
+\begin{align*}
+    \ode N(t) = N(t) * t && \ode N(t,x) = N(t,x) + \ode[x]^2 N(t,x) && \pde^2 f^2 
+\end{align*}
+\vspace{0.5em}
+
+%
+The \cs{ode} command will scan for an exponent between \oarg{variable} and \marg{function}. Should there is indeed an exponent, that exponent gets `yoinked' away and processed in accordance to the style of notation. In the case of Lagrange or Netwon notation, there is the \verb|maxprimes=<integer>| option for either the package or the \cs{setDE\marg{option}} command;
+
+
+\begin{minipage}{0.8\textwidth}
+    \vspace{0.75em}
+    {\ \verb|\usepackage[maxprimes=<integer>]{odesandpdes}| \emph{and/or}\\ \verb|\setDE{maxprimes=<integer>}|}
+\end{minipage}
+\vspace{0.75em}
+
+%
+3 being the default.\newline
+
+There was rational in choosing to check for the exponent immediately after the macro command opposed to checking for the exponent at the end after the function. 
+As, often you would want add a higher degree very quickly as opposed to after defining the function.\ 
+\verb|\ode^2{f(x)}| as opposed to \verb|\ode{f(x)}^2|. 
+As well, with the ``proper'' spacing, there is little need for the use of the braces, so as to help promote an easier workflow without always needed to worry about the damn brace. Not that one can not use the brace for personal taste. 
+For the sake of parity, the \cs{pde} command will also take its variable in brackets.
+
+
+\newpage
+\vbox{%
+The following examples all take the identical form, shown in the following verbatim enviroment.\vspace{1em}
+
+
+\begin{minipage}{0.98\textwidth}
+\begin{verbatim}
+\begin{align*}
+\ode f(x)      && \ode[x]{f(x)} && \ode^1  f(x)     && \ode[x]^5 {f(x)} \\
+\ode*          && \ode*[x]      && \ode*^2          && \ode*[x]^6       \\
+\pde[t] {f(x)} && \pde[x] f(x)  && \pde[t]^3{f(x)}  && \pde[x]^7 f(x)   \\
+\pde*[t]       && \pde*[x]      && \pde*[t]^4       && \pde*[x]^8 
+\end{align*}
+\end{verbatim}
+\end{minipage}
+\vspace{1em}
+
+
+\verb|\setDE{notation=default}| \emph{and/or} \verb|\usepackage[notation=default]{odesandpdes}|
+\verb|\setDE{notation=Lagrange}| \emph{and/or} \verb|\usepackage[notation=Lagrange]{odesandpdes}|
+\fbox{\parbox{0.65\textwidth}{
+\setDE{notation=Lagrange}
+\begin{align*}
+    \ode f(x)      && \ode[x]{f(x)} && \ode^1  f(x)     && \ode[x]^5 {f(x)} \\
+    \ode*          && \ode*[x]      && \ode*^2          && \ode*[x]^6       \\
+    \pde[t] {f(x)} && \pde[x] f(x)  && \pde[t]^3{f(x)}  && \pde[x]^7 f(x)   \\
+    \pde*[t]       && \pde*[x]      && \pde*[t]^4       && \pde*[x]^8 
+\end{align*}
+}}\vspace{1em}
+
+%\tracingmacros=1
+\verb|\setDE{notation=Leibniz}| \emph{and/or} \verb|\usepackage[notation=Leibniz]{odesandpdes}|
+\fbox{\parbox{0.65\textwidth}{
+\setDE{notation=Leibniz}%\tracingall
+\begin{align*}
+    \ode f(x)      && \ode[x]{f(x)} && \ode^1  f(x)     && \ode[x]^5 {f(x)} \\
+    \ode*          && \ode*[x]      && \ode*^2          && \ode*[x]^6       \\
+    \pde[t] {f(x)} && \pde[x] f(x)  && \pde[t]^3{f(x)}  && \pde[x]^7 f(x)   \\
+    \pde*[t]       && \pde*[x]      && \pde*[t]^4       && \pde*[x]^8 
+\end{align*}
+}}\vspace{1em}
+
+\verb|\setDE{notation=Newton}| \emph{and/or} \verb|\usepackage[notation=Newton]{odesandpdes}|
+\fbox{\parbox{0.65\textwidth}{
+\setDE{notation=Newton}
+% \tracingmacros=1\tracingassigns=1\tracingcommands=1%
+\begin{align*}
+    \ode f(x)      && \ode[x]{f(x)} && \ode^1  f(x)     && \ode[x]^5 {f(x)} \\
+    \ode*          && \ode*[x]      && \ode*^2          && \ode*[x]^6       \\
+    \pde[t] {f(x)} && \pde[x] f(x)  && \pde[t]^3{f(x)}  && \pde[x]^7 f(x)   \\
+    \pde*[t]       && \pde*[x]      && \pde*[t]^4       && \pde*[x]^8 
+\end{align*}
+}}\vspace{1em}
+
+
+
+
+\verb|\setDE{maxprimes=7}| \emph{and/or} \verb|\usepackage[maxprimes=7]{odesandpdes}|
+\fbox{\parbox{0.65\textwidth}{
+\setDE{notation=Lagrange,maxprimes=7}
+\begin{align*}
+\ode^1 f &&\ode^2 f &&\ode^3 f &&\ode^4 f &&\ode^5 f &&\ode^6 f &&\ode^7 f &&\ode^8 f &&\ode^9 f 
+\end{align*}
+\setDE{notation=Newton}
+\vspace{-1.5em}
+\begin{align*}
+\ode^1 f &&\ode^2 f &&\ode^3 f &&\ode^4 f &&\ode^5 f &&\ode^6 f &&\ode^7 f &&\ode^8 f &&\ode^9 f 
+\end{align*}
+}}}
+\newpage
+
+Now, because I am not an insane person, and have mostly learned how \TeX\ deconstructs text into constitute registries and boxes, the way any sane person might.
+When using a non-starred version of a command, after the function is defined, you can place an `\verb|at |$\langle value\rangle$\verb|;|',\footnote{heavily inspired by Tikz} and the representation will shown according to notational convention.
+\vspace{1em}
+
+
+\begin{minipage}[c]{0.45\textwidth}
+\begin{verbatim}
+\begin{align*}
+    \ode[x]  c at 23\pi;   &= i \\
+    \ode[x]^3   c at 69;   &= i \\
+    \ode[x]^{69} c at L;+t &= i \\
+    \ode[x]^9  c af 420;   &= i \\
+    \ode[x]^6   c 13       &= i 
+\end{align*}
+\end{verbatim}
+\end{minipage}\par\vspace{1em}
+
+
+\hfill~%
+\begin{minipage}[t]{0.30\textwidth}%\tracingmacros=1
+\noindent%
+\begin{verbatim}
+\setDE{notation=Leibniz}
+\end{verbatim}
+    \setDE{notation=Leibniz} %\tracingall
+    % \tracingall
+% \tracingmacros=1\tracingassigns=1\tracingcommands=1%
+\begin{align*} 
+    \ode[x]  c at 23\pi;   &= i \\
+    \ode[x]^3   c at 69;   &= i \\
+    \ode[x]^{69} c at L;+t &= i \\
+    \ode[x]^9  c af 420;   &= i \\
+    \ode[x]^6   c 13       &= i 
+\end{align*}
+\end{minipage}
+~\hfill~%
+\begin{minipage}[t]{0.30\textwidth}
+\noindent%
+\begin{verbatim}
+\setDE{notation=Newton}
+\end{verbatim}
+    \setDE{notation=Newton}
+    %\tracingall
+\begin{align*}
+    \ode[x]  c at 23\pi;   &= i \\
+    \ode[x]^3   c at 69;   &= i \\
+    \ode[x]^{69} c at L;+t &= i \\
+    \ode[x]^9  c af 420;   &= i \\
+    \ode[x]^6   c 13       &= i 
+\end{align*}
+\end{minipage}
+~\hfill~%
+\begin{minipage}[t]{0.30\textwidth}%\tracingmacros=1
+\noindent%
+\begin{verbatim}
+\setDE{notation=Lagrange}
+\end{verbatim}
+    \setDE{notation=Lagrange}
+\begin{align*}
+    \ode[x]  c at 23\pi;   &= i \\
+    \ode[x]^3   c at 69;   &= i \\
+    \ode[x]^{69} c at L;+t &= i \\
+    \ode[x]^9  c af 420;   &= i \\
+    \ode[x]^6   c 13       &= i 
+\end{align*}
+\end{minipage}~\hfill
+
+\vspace{1em}
+Also the Newton and Lagrange notation is procedural;
+
+\vspace{2em}
+\begin{verbatim}
+    \setDE{maxprimes=69}
+\end{verbatim}
+\vspace{1em}
+\setDE{maxprimes=69}
+\setDE{notation=Lagrange}
+\begin{equation*}
+    \ode^{69} f
+\end{equation*}
+
+\setDE{notation=Newton}
+\begin{equation*}
+    \ode^{69} f
+\end{equation*}
+
+Truly beautiful.\par\vspace{1em}
+
+In the next semester I expect to try seeing if its possible to, given that you put multiple variable in the options, to procedurally generate partials that address separate variables sequatentially.
+\begin{equation*}
+    \frac{\partial^2}{\partial x \partial y}
+\end{equation*}
+
+
+\end{document}

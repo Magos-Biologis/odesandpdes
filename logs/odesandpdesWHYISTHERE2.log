@@ -1,0 +1,2496 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.28)  15 JAN 2024 20:59
+entering extended mode
+ \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**odesandpdes.dtx
+(./odesandpdes.dtx
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-05-22> (c:/texlive/2023/texmf-dist/tex/latex/base/docstrip.tex
+\blockLevel=\count185
+\emptyLines=\count186
+\processedLines=\count187
+\commentsRemoved=\count188
+\commentsPassed=\count189
+\codeLinesPassed=\count190
+\TotalprocessedLines=\count191
+\TotalcommentsRemoved=\count192
+\TotalcommentsPassed=\count193
+\TotalcodeLinesPassed=\count194
+\NumberOfFiles=\count195
+\inFile=\read2
+\inputcheck=\read3
+\off@0=\count196
+\off@1=\count197
+\off@2=\count198
+\off@3=\count199
+\off@4=\count266
+\off@5=\count267
+\off@6=\count268
+\off@7=\count269
+\off@8=\count270
+\off@9=\count271
+\off@10=\count272
+\off@11=\count273
+\off@12=\count274
+\off@13=\count275
+\off@14=\count276
+\off@15=\count277
+\@maxfiles=\count278
+\@maxoutfiles=\count279
+
+Utility: `docstrip' v2.6b <2022-09-03>
+English documentation    <2022-09-03>
+
+**********************************************************
+* This program converts documented macro-files into fast *
+* loadable files by stripping off (nearly) all comments! *
+**********************************************************
+
+********************************************************
+* No Configuration file found, using default settings. *
+********************************************************
+
+)
+
+Generating file(s) ./odesandpdes.sty 
+\openout0 = `./odesandpdes.sty'.
+
+
+Processing file odesandpdes.dtx (package) -> odesandpdes.sty
+Lines  processed: 1275
+Comments removed: 991
+Comments  passed: 0
+Codelines passed: 264
+
+
+Generating file(s) ./odesandpdes.ins 
+\openout0 = `./odesandpdes.ins'.
+
+
+Processing file odesandpdes.dtx (install) -> odesandpdes.ins
+Lines  processed: 1275
+Comments removed: 991
+Comments  passed: 0
+Codelines passed: 264
+
+
+Generating file(s) ./README.txt 
+\openout0 = `./README.txt'.
+
+
+Processing file odesandpdes.dtx (readme) -> README.txt
+Lines  processed: 1275
+Comments removed: 991
+Comments  passed: 0
+Codelines passed: 264
+
+
+LaTeX Warning: You have requested package `',
+               but the package provides `odesandpdes'.
+
+Package: odesandpdes 2024/01/11 v0.9.5 For streamlining ODE and PDE usage
+(c:/texlive/2023/texmf-dist/tex/latex/base/ltxdoc.cls
+Document Class: ltxdoc 2022/06/22 v2.1i Standard LaTeX documentation class
+*************************************
+* Local config file ltxdoc.cfg used
+*************************************
+(c:/texlive/2023/texmf-dist/tex/latex/base/ltxdoc.cfg
+File: ltxdoc.cfg 2022/06/14 v2.0d ltxdoc.cls configuration (LaTeX Project)
+) (c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(c:/texlive/2023/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count280
+\c@section=\count281
+\c@subsection=\count282
+\c@subsubsection=\count283
+\c@paragraph=\count284
+\c@subparagraph=\count285
+\c@figure=\count286
+\c@table=\count287
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (c:/texlive/2023/texmf-dist/tex/latex/base/doc.sty
+Package: doc 2022/07/03 v3.0k Standard LaTeX documentation package V3 (FMi)
+\c@StandardModuleDepth=\count288
+\guard@level=\count289
+\MacrocodeTopsep=\skip50
+\MacroIndent=\dimen141
+\macro@cnt=\count290
+\MacroTopsep=\skip51
+\IndexMin=\dimen142
+\c@IndexColumns=\count291
+ (c:/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count292
+\mult@box=\box51
+\multicol@leftmargin=\dimen143
+\c@unbalance=\count293
+\c@collectmore=\count294
+\doublecol@number=\count295
+\multicoltolerance=\count296
+\multicolpretolerance=\count297
+\full@width=\dimen144
+\page@free=\dimen145
+\premulticols=\dimen146
+\postmulticols=\dimen147
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box52
+\last@line=\box53
+\maxbalancingoverflow=\dimen148
+\mult@rightbox=\box54
+\mult@grightbox=\box55
+\mult@firstbox=\box56
+\mult@gfirstbox=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\c@minrows=\count298
+\c@columnbadness=\count299
+\c@finalcolumnbadness=\count300
+\last@try=\dimen149
+\multicolovershoot=\dimen150
+\multicolundershoot=\dimen151
+\mult@nat@firstbox=\box94
+\colbreak@box=\box95
+\mc@col@check@num=\count301
+)
+\GlossaryMin=\dimen152
+\c@GlossaryColumns=\count302
+\check@sum=\count303
+\bslash@cnt=\count304
+\wrong@table=\toks16
+\c@CodelineNo=\count305
+\@temptokenb=\toks17
+)) (c:/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (c:/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (c:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (c:/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count306
+\Gm@cntv=\count307
+\c@Gm@tempcnt=\count308
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks19
+) (c:/texlive/2023/texmf-dist/tex/latex/psnfss/mathptmx.sty
+Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen161
+)) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen162
+) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count309
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count310
+\leftroot@=\count311
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count312
+\DOTSCASE@=\count313
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box96
+\strutbox@=\box97
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen163
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count314
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count315
+\dotsspace@=\muskip16
+\c@parentequation=\count316
+\dspbrk@lvl=\count317
+\tag@help=\toks21
+\row@=\count318
+\column@=\count319
+\maxfields@=\count320
+\andhelp@=\toks22
+\eqnshift@=\dimen164
+\alignsep@=\dimen165
+\tagshift@=\dimen166
+\tagwidth@=\dimen167
+\totwidth@=\dimen168
+\lineht@=\dimen169
+\@envbody=\toks23
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/texlive/2023/texmf-dist/tex/latex/fdsymbol/fdsymbol.sty
+Package: fdsymbol 2011/11/01 v0.8 FdSymbol support package
+ (c:/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+)
+\XKV@depth=\count321
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+LaTeX Info: Redefining \dagger on input line 81.
+LaTeX Info: Redefining \ddagger on input line 82.
+LaTeX Info: Redefining \mathparagraph on input line 83.
+LaTeX Info: Redefining \mathsection on input line 84.
+LaTeX Info: Redefining \mathdollar on input line 85.
+LaTeX Info: Redefining \mathsterling on input line 86.
+LaTeX Info: Redefining \Re on input line 92.
+LaTeX Info: Redefining \Im on input line 93.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 180.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 180.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/ztmcm/m/n --> U/FdSymbolA/m/n on input line 180.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 180.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/ztmcm/m/n --> U/FdSymbolA/m/n on input line 180.
+\symrelations=\mathgroup6
+\symarrows=\mathgroup7
+\symnarrows=\mathgroup8
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 184.
+LaTeX Font Info:    Encoding `OMX' has changed to `U' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 184.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/ztmcm/m/n --> U/FdSymbolE/m/n on input line 184.
+LaTeX Font Info:    Encoding `OMX' has changed to `U' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 184.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/ztmcm/m/n --> U/FdSymbolE/m/n on input line 184.
+\symdelimiters=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  U/FdSymbolA/m/n --> U/FdSymbolA/b/n on input line 186.
+LaTeX Font Info:    Overwriting symbol font `relations' in version `bold'
+(Font)                  U/FdSymbolB/m/n --> U/FdSymbolB/b/n on input line 187.
+LaTeX Font Info:    Overwriting symbol font `arrows' in version `bold'
+(Font)                  U/FdSymbolC/m/n --> U/FdSymbolC/b/n on input line 188.
+LaTeX Font Info:    Overwriting symbol font `narrows' in version `bold'
+(Font)                  U/FdSymbolD/m/n --> U/FdSymbolD/b/n on input line 189.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  U/FdSymbolE/m/n --> U/FdSymbolE/b/n on input line 190.
+LaTeX Font Info:    Overwriting symbol font `delimiters' in version `bold'
+(Font)                  U/FdSymbolF/m/n --> U/FdSymbolF/b/n on input line 191.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 192.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  OMS/cmsy/m/n --> OMS/cmsy/b/n on input line 193.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 196.
+LaTeX Info: Redefining \vdots on input line 221.
+LaTeX Info: Redefining \relbar on input line 1205.
+LaTeX Info: Redefining \Relbar on input line 1206.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 1796.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1797.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1799.
+LaTeX Font Info:    Redeclaring math symbol \setminus on input line 1902.
+LaTeX Font Info:    Redeclaring math symbol \mid on input line 1907.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 1912.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 1944.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 1945.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 1946.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 1947.
+LaTeX Info: Redefining \overbrace on input line 1963.
+LaTeX Info: Redefining \underbrace on input line 1966.
+LaTeX Font Info:    Redeclaring math symbol \surd on input line 1980.
+) (.Output/odesandpdes.sty
+Package: odesandpdes 2024/01/11 v0.9.5 For streamlining ODE and PDE usage
+\m@rkings=\count322
+\expo@de=\count323
+\l@wert@ks=\toks27
+\upp@rt@ks=\toks28
+\@tpost@ks=\toks29
+\@delowb@x=\box98
+\@deuppb@x=\box99
+\@deresb@x=\box100
+) (c:/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen170
+\pgfutil@tempdimb=\dimen171
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box101
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen172
+\Gin@req@width=\dimen173
+) (c:/texlive/2023/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen174
+\pgf@y=\dimen175
+\pgf@xa=\dimen176
+\pgf@ya=\dimen177
+\pgf@xb=\dimen178
+\pgf@yb=\dimen179
+\pgf@xc=\dimen180
+\pgf@yc=\dimen181
+\pgf@xd=\dimen182
+\pgf@yd=\dimen183
+\w@pgf@writea=\write3
+\r@pgf@reada=\read4
+\c@pgf@counta=\count324
+\c@pgf@countb=\count325
+\c@pgf@countc=\count326
+\c@pgf@countd=\count327
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+\pgf@sys@id@count=\count328
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count329
+\pgfsyssoftpath@bigbuffer@items=\count330
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen184
+\pgfmath@count=\count331
+\pgfmath@box=\box102
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count332
+)) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen185
+\pgf@picmaxx=\dimen186
+\pgf@picminy=\dimen187
+\pgf@picmaxy=\dimen188
+\pgf@pathminx=\dimen189
+\pgf@pathmaxx=\dimen190
+\pgf@pathminy=\dimen191
+\pgf@pathmaxy=\dimen192
+\pgf@xx=\dimen193
+\pgf@xy=\dimen194
+\pgf@yx=\dimen195
+\pgf@yy=\dimen196
+\pgf@zx=\dimen197
+\pgf@zy=\dimen198
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen199
+\pgf@path@lasty=\dimen256
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen257
+\pgf@shorten@start@additional=\dimen258
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box103
+\pgf@hbox=\box104
+\pgf@layerbox@main=\box105
+\pgf@picture@serial@count=\count333
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen259
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen260
+\pgf@pt@y=\dimen261
+\pgf@pt@temp=\dimen262
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen263
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen264
+\pgf@sys@shading@range@num=\count334
+\pgf@shadingcount=\count335
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box106
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box107
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen265
+\pgf@nodesepend=\dimen266
+) (c:/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen267
+\pgffor@skip=\dimen268
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+)) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count336
+\pgfplotmarksize=\dimen269
+)
+\tikz@lastx=\dimen270
+\tikz@lasty=\dimen271
+\tikz@lastxsaved=\dimen272
+\tikz@lastysaved=\dimen273
+\tikz@lastmovetox=\dimen274
+\tikz@lastmovetoy=\dimen275
+\tikzleveldistance=\dimen276
+\tikzsiblingdistance=\dimen277
+\tikz@figbox=\box108
+\tikz@figbox@bg=\box109
+\tikz@tempbox=\box110
+\tikz@tempbox@bg=\box111
+\tikztreelevel=\count337
+\tikznumberofchildren=\count338
+\tikznumberofcurrentchild=\count339
+\tikz@fig@count=\count340
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count341
+\pgfmatrixcurrentcolumn=\count342
+\pgf@matrix@numberofcolumns=\count343
+)
+\tikz@expandcount=\count344
+ (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
+File: tikzlibrarygraphs.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\tikz@lib@auto@number=\count345
+\tikz@qnode@count=\count346
+) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+\@indexfile=\write4
+\openout4 = `odesandpdes.idx'.
+
+
+Writing index file odesandpdes.idx
+\@glossaryfile=\write5
+\openout5 = `odesandpdes.glo'.
+
+Writing glossary file odesandpdes.glo 
+(c:/texlive/2023/texmf-dist/tex/latex/hypdoc/hypdoc.sty
+Package: hypdoc 2023-01-23 v1.18 Hyper extensions for doc.sty (HO)
+ (c:/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (c:/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-05-16 v7.00y Hypertext links for LaTeX
+ (c:/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (c:/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (c:/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-05-16 v2.51 Cross-referencing by name of section
+ (c:/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (c:/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count347
+) (c:/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count348
+)
+\@linkdim=\dimen278
+\Hy@linkcounter=\count349
+\Hy@pagecounter=\count350
+ (c:/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-05-16 v7.00y Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (c:/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count351
+ (c:/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-05-16 v7.00y Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 4050.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 4050.
+Package hyperref Info: Option `hyperindex' set `false' on input line 4050.
+Package hyperref Info: Option `pdfusetitle' set `true' on input line 4050.
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4050.
+Package hyperref Info: Hyper figures OFF on input line 4167.
+Package hyperref Info: Link nesting OFF on input line 4172.
+Package hyperref Info: Hyper index OFF on input line 4177.
+Package hyperref Info: Plain pages OFF on input line 4182.
+Package hyperref Info: Backreferencing OFF on input line 4187.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4434.
+\c@Hy@tempcnt=\count352
+ (c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4772.
+\XeTeXLinkMargin=\dimen279
+ (c:/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count353
+\Field@Width=\dimen280
+\Fld@charsize=\dimen281
+Package hyperref Info: Hyper figures OFF on input line 6051.
+Package hyperref Info: Link nesting OFF on input line 6056.
+Package hyperref Info: Hyper index OFF on input line 6061.
+Package hyperref Info: backreferencing OFF on input line 6066.
+Package hyperref Info: Link coloring OFF on input line 6071.
+Package hyperref Info: Link coloring with OCG OFF on input line 6076.
+Package hyperref Info: PDF/A mode OFF on input line 6081.
+ (c:/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count354
+\c@Item=\count355
+\c@Hfootnote=\count356
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (c:/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2023-05-16 v7.00y Hyperref driver for pdfTeX
+\Fld@listcount=\count357
+\c@bookmark@seq@number=\count358
+ (c:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (c:/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip57
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 66.
+Package hyperref Info: Option `plainpages' set `false' on input line 66.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 66.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 66.
+\c@HD@unique=\count359
+\c@HD@hypercount=\count360
+\HD@helplength=\skip58
+)
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 109.
+ (c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count361
+\l__pdf_internal_box=\box112
+) (.Output/odesandpdes.aux)
+\openout1 = `odesandpdes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 109.
+LaTeX Font Info:    ... okay on input line 109.
+Package doc Info: Made | a short reference for \verb on input line 109.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* hratio: 1:1
+* vratio: 1:1
+* modes: 
+* h-part:(L,W,R)=(104.5657pt, 388.37646pt, 104.5657pt)
+* v-part:(T,H,B)=(84.50339pt, 676.04005pt, 84.5034pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=388.37646pt
+* \textheight=676.04005pt
+* \oddsidemargin=32.29572pt
+* \evensidemargin=32.29572pt
+* \topmargin=-24.7666pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=126.0pt
+* \marginparsep=5.475pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemargintrue
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count362
+\scratchdimen=\dimen282
+\scratchbox=\box113
+\nofMPsegments=\count363
+\nofMParguments=\count364
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count365
+\MPscratchDim=\dimen283
+\MPnumerator=\count366
+\makeMPintoPDFobject=\count367
+\everyMPtoPDFconversion=\toks43
+) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package hyperref Info: Link coloring ON on input line 109.
+ (.Output/odesandpdes.out) (.Output/odesandpdes.out)
+\@outlinefile=\write6
+\openout6 = `odesandpdes.out'.
+
+ (.Output/odesandpdes.hd)
+\HD@savedest@out=\write7
+\openout7 = `odesandpdes.hd'.
+
+ (./odesandpdes.dtx
+***************************
+* Character table correct *
+***************************
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 160.
+(c:/texlive/2023/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 160.
+ (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 160.
+ (c:/texlive/2023/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 17.28pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 12.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 10.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 17.28pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 12.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 10.0pt on input line 160.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 160.
+ (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 17.28pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 12.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 10.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 17.28pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 12.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 10.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 17.28pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 12.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 10.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 9.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 7.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 9.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 7.0pt on input line 160.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 9.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 7.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 9.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 7.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 9.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 7.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 7.0pt on input line 160.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 160.
+ (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 5.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 5.0pt on input line 160.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 5.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 5.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 5.0pt on input line 160.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 5.0pt on input line 160.
+ (.Output/odesandpdes.toc
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 10.95pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolA/m/n' will be
+(Font)              scaled to size 6.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 10.95pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolE/m/n' will be
+(Font)              scaled to size 6.0pt on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 10.95pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolB/m/n' will be
+(Font)              scaled to size 6.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 10.95pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolC/m/n' will be
+(Font)              scaled to size 6.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 10.95pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolD/m/n' will be
+(Font)              scaled to size 6.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 10.95pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `U/FdSymbolF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 3.
+)
+\tf@toc=\write8
+\openout8 = `odesandpdes.toc'.
+
+ [1
+
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+Overfull \hbox (62.24692pt too wide) in paragraph at lines 218--223
+\T1/ptm/m/n/10.95 into the mech-a-nism that makes this pack-age bet-ter than the generic \T1/cmtt/m/n/10.95 \newcommand*\ode[2][t]{$\U/FdSymbolF/m/n/10.95 …$[]\T1/cmtt/m/it/10.95 ...$\U/FdSymbolF/m/n/10.95 ‹$[]\T1/cmtt/m/n/10.95 } 
+ []
+
+
+Overfull \hbox (31.521pt too wide) in paragraph at lines 227--227
+[]   \T1/cmtt/m/n/10 \ode N(t) = N(t) * t && \ode N(t,x) = N(t,x) + \ode[x]^2 N(t,x) && \pde^2 f^2[] 
+ []
+
+
+{math mode: \tracingrestores}
+{\tracingassigns}
+{into \tracingassigns=1}
+
+~...........\ode ->\let \@de@perat@r =\d@@ \@de@ifst@r 
+{\let}
+{changing \@de@perat@r=undefined}
+{into \@de@perat@r=macro:->\mathrm d}
+
+~............\@de@ifst@r ->\@deifnextch@r * \@dest@red@rg \@den@st@r@rg 
+
+~............\@deifnextch@r #1#2#3-> \let \@dedesiredtoken =#1\relax \def \@de@tmpA {#2}\def \@de@tmpB {#3} \futurelet \@detesttoken \@denext@rg 
+#1<-*
+#2<-\@dest@red@rg 
+#3<-\@den@st@r@rg 
+{blank space  }
+{\let}
+{changing \@dedesiredtoken=undefined}
+{into \@dedesiredtoken=the character *}
+{\relax}
+{\def}
+{changing \@de@tmpA=undefined}
+{into \@de@tmpA=macro:->\@dest@red@rg }
+{\def}
+{changing \@de@tmpB=undefined}
+{into \@de@tmpB=macro:->\@den@st@r@rg }
+{blank space  }
+{\futurelet}
+{changing \@detesttoken=undefined}
+{into \@detesttoken=the letter N}
+
+~.............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\ifx: (level 2) entered on line 232}
+{false}
+{\else: \ifx (level 2) entered on line 232}
+{\let}
+{changing \@de@nextact=undefined}
+{into \@de@nextact=macro:->\@den@st@r@rg }
+{\fi: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@de@nextact ->\@den@st@r@rg 
+
+~.............\@den@st@r@rg ->\@de@isst@r {n@st@r} \@de@ifbr@ck 
+
+~.............\@de@isst@r #1->\def \@deisitorisntitastar {\csname @de#1y@ink\endcsname }\def \@definalchosenform {\csname #1@\@de@option \endcsname }
+#1<-n@st@r
+{\def}
+{changing \@deisitorisntitastar=undefined}
+{into \@deisitorisntitastar=macro:->\csname @den@st@ry@ink\endcsname }
+{\def}
+{changing \@definalchosenform=undefined}
+{into \@definalchosenform=macro:->\csname n@st@r@\@de@option \endcsname }
+{blank space  }
+
+~.............\@de@ifbr@ck ->\@deifnextch@r [\@de@ption@l@rg {\@de@ption@l@rg [t]}
+
+~.............\@deifnextch@r #1#2#3-> \let \@dedesiredtoken =#1\relax \def \@de@tmpA {#2}\def \@de@tmpB {#3} \futurelet \@detesttoken \@denext@rg 
+#1<-[
+#2<-\@de@ption@l@rg 
+#3<-\@de@ption@l@rg [t]
+{blank space  }
+{\let}
+{changing \@dedesiredtoken=the character *}
+{into \@dedesiredtoken=the character [}
+{\relax}
+{\def}
+{changing \@de@tmpA=macro:->\@dest@red@rg }
+{into \@de@tmpA=macro:->\@de@ption@l@rg }
+{\def}
+{changing \@de@tmpB=macro:->\@den@st@r@rg }
+{into \@de@tmpB=macro:->\@de@ption@l@rg [t]}
+{blank space  }
+{\futurelet}
+{reassigning \@detesttoken=the letter N}
+
+~.............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\ifx: (level 2) entered on line 232}
+{false}
+{\else: \ifx (level 2) entered on line 232}
+{\let}
+{changing \@de@nextact=macro:->\@den@st@r@rg }
+{into \@de@nextact=macro:->\@de@ption@l@rg [t]}
+{\fi: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@de@nextact ->\@de@ption@l@rg [t]
+
+~.............\@de@ption@l@rg [#1]->\expandafter \l@wert@ks {#1}\relax \@de@ifexpon 
+#1<-t
+{\expandafter}
+{\toks27}
+{changing \toks27=}
+{into \toks27=t}
+{\relax}
+
+~.............\@de@ifexpon ->\@deifnextch@r ^\@de@exponent@rg {\@de@exponent@rg ^1}
+
+~.............\@deifnextch@r #1#2#3-> \let \@dedesiredtoken =#1\relax \def \@de@tmpA {#2}\def \@de@tmpB {#3} \futurelet \@detesttoken \@denext@rg 
+#1<-^
+#2<-\@de@exponent@rg 
+#3<-\@de@exponent@rg ^1
+{blank space  }
+{\let}
+{changing \@dedesiredtoken=the character [}
+{into \@dedesiredtoken=superscript character ^}
+{\relax}
+{\def}
+{changing \@de@tmpA=macro:->\@de@ption@l@rg }
+{into \@de@tmpA=macro:->\@de@exponent@rg }
+{\def}
+{changing \@de@tmpB=macro:->\@de@ption@l@rg [t]}
+{into \@de@tmpB=macro:->\@de@exponent@rg ^1}
+{blank space  }
+{\futurelet}
+{reassigning \@detesttoken=the letter N}
+
+~.............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\ifx: (level 2) entered on line 232}
+{false}
+{\else: \ifx (level 2) entered on line 232}
+{\let}
+{changing \@de@nextact=macro:->\@de@ption@l@rg [t]}
+{into \@de@nextact=macro:->\@de@exponent@rg ^1}
+{\fi: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@de@nextact ->\@de@exponent@rg ^1
+
+~.............\@de@exponent@rg ^#1->\expo@de #1\relax \@deisitorisntitastar 
+#1<-1
+{\count323}
+{changing \count323=0}
+{into \count323=1}
+{\relax}
+
+~.............\@deisitorisntitastar ->\csname @den@st@ry@ink\endcsname 
+{\csname}
+
+~.............\@den@st@ry@ink ->\expandafter \@de@y@inkf@rm 
+{\expandafter}
+
+~.............\@de@y@inkf@rm ->\csname @de@func@\@de@option \endcsname 
+{\csname}
+
+~.............\@de@option ->\csname @de@not@default\endcsname 
+{\csname}
+
+~..............\@de@not@default ->Leib
+
+~.............\@de@func@Leib ->\expandafter \@defuncg@bbler 
+{\expandafter}
+
+~.............\@defuncg@bbler #1->\beginnext \toks 0={\the \upp@rt@ks #1} \edef \next {\upp@rt@ks =\expandafter {\the \toks 0}} \endnext \@deifnotsp@ce 
+#1<-N
+
+~............\beginnext ->\begingroup \let \next \undefined 
+{\begingroup}
+{entering semi simple group (level 10) at line 232}
+{\let}
+{changing \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{into \next=undefined}
+{\toks}
+{changing \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{into \toks0=\the \upp@rt@ks N}
+{blank space  }
+{\edef}
+{\expandafter}
+{\the}
+{changing \next=undefined}
+{into \next=macro:->\upp@rt@ks ={N}}
+{blank space  }
+
+~............\endnext ->\expandafter \endgroup \next 
+{\expandafter}
+
+~.............\next ->\upp@rt@ks ={N}
+{\endgroup}
+{restoring \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{restoring \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{leaving semi simple group (level 10) entered at line 232}
+{\toks28}
+{changing \toks28=}
+{into \toks28=N}
+
+~............\@deifnotsp@ce ->\futurelet \@detesttoken \@det@kmucher 
+{\futurelet}
+{changing \@detesttoken=the letter N}
+{into \@detesttoken=the character (}
+
+~.............\@det@kmucher ->\ifx \@detesttoken \@sptoken \expandafter \@deif@tpos \else \expandafter \@defuncg@bbler \fi 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\expandafter}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@defuncg@bbler #1->\beginnext \toks 0={\the \upp@rt@ks #1} \edef \next {\upp@rt@ks =\expandafter {\the \toks 0}} \endnext \@deifnotsp@ce 
+#1<-(
+
+~............\beginnext ->\begingroup \let \next \undefined 
+{\begingroup}
+{entering semi simple group (level 10) at line 232}
+{\let}
+{changing \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{into \next=undefined}
+{\toks}
+{changing \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{into \toks0=\the \upp@rt@ks (}
+{blank space  }
+{\edef}
+{\expandafter}
+{\the}
+{changing \next=undefined}
+{into \next=macro:->\upp@rt@ks ={N(}}
+{blank space  }
+
+~............\endnext ->\expandafter \endgroup \next 
+{\expandafter}
+
+~.............\next ->\upp@rt@ks ={N(}
+{\endgroup}
+{restoring \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{restoring \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{leaving semi simple group (level 10) entered at line 232}
+{\toks28}
+{changing \toks28=N}
+{into \toks28=N(}
+
+~............\@deifnotsp@ce ->\futurelet \@detesttoken \@det@kmucher 
+{\futurelet}
+{changing \@detesttoken=the character (}
+{into \@detesttoken=the letter t}
+
+~.............\@det@kmucher ->\ifx \@detesttoken \@sptoken \expandafter \@deif@tpos \else \expandafter \@defuncg@bbler \fi 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\expandafter}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@defuncg@bbler #1->\beginnext \toks 0={\the \upp@rt@ks #1} \edef \next {\upp@rt@ks =\expandafter {\the \toks 0}} \endnext \@deifnotsp@ce 
+#1<-t
+
+~............\beginnext ->\begingroup \let \next \undefined 
+{\begingroup}
+{entering semi simple group (level 10) at line 232}
+{\let}
+{changing \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{into \next=undefined}
+{\toks}
+{changing \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{into \toks0=\the \upp@rt@ks t}
+{blank space  }
+{\edef}
+{\expandafter}
+{\the}
+{changing \next=undefined}
+{into \next=macro:->\upp@rt@ks ={N(t}}
+{blank space  }
+
+~............\endnext ->\expandafter \endgroup \next 
+{\expandafter}
+
+~.............\next ->\upp@rt@ks ={N(t}
+{\endgroup}
+{restoring \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{restoring \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{leaving semi simple group (level 10) entered at line 232}
+{\toks28}
+{changing \toks28=N(}
+{into \toks28=N(t}
+
+~............\@deifnotsp@ce ->\futurelet \@detesttoken \@det@kmucher 
+{\futurelet}
+{changing \@detesttoken=the letter t}
+{into \@detesttoken=the character )}
+
+~.............\@det@kmucher ->\ifx \@detesttoken \@sptoken \expandafter \@deif@tpos \else \expandafter \@defuncg@bbler \fi 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\expandafter}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@defuncg@bbler #1->\beginnext \toks 0={\the \upp@rt@ks #1} \edef \next {\upp@rt@ks =\expandafter {\the \toks 0}} \endnext \@deifnotsp@ce 
+#1<-)
+
+~............\beginnext ->\begingroup \let \next \undefined 
+{\begingroup}
+{entering semi simple group (level 10) at line 232}
+{\let}
+{changing \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{into \next=undefined}
+{\toks}
+{changing \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{into \toks0=\the \upp@rt@ks )}
+{blank space  }
+{\edef}
+{\expandafter}
+{\the}
+{changing \next=undefined}
+{into \next=macro:->\upp@rt@ks ={N(t)}}
+{blank space  }
+
+~............\endnext ->\expandafter \endgroup \next 
+{\expandafter}
+
+~.............\next ->\upp@rt@ks ={N(t)}
+{\endgroup}
+{restoring \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{restoring \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{leaving semi simple group (level 10) entered at line 232}
+{\toks28}
+{changing \toks28=N(t}
+{into \toks28=N(t)}
+
+~............\@deifnotsp@ce ->\futurelet \@detesttoken \@det@kmucher 
+{\futurelet}
+{changing \@detesttoken=the character )}
+{into \@detesttoken=blank space  }
+
+~.............\@det@kmucher ->\ifx \@detesttoken \@sptoken \expandafter \@deif@tpos \else \expandafter \@defuncg@bbler \fi 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\expandafter}
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@deif@tpos ->\@deifnextch@r a \@de@tfinder \@definalchosenform 
+
+~.............\@deifnextch@r #1#2#3-> \let \@dedesiredtoken =#1\relax \def \@de@tmpA {#2}\def \@de@tmpB {#3} \futurelet \@detesttoken \@denext@rg 
+#1<-a
+#2<-\@de@tfinder 
+#3<-\@definalchosenform 
+{blank space  }
+{\let}
+{changing \@dedesiredtoken=superscript character ^}
+{into \@dedesiredtoken=the letter a}
+{\relax}
+{\def}
+{changing \@de@tmpA=macro:->\@de@exponent@rg }
+{into \@de@tmpA=macro:->\@de@tfinder }
+{\def}
+{changing \@de@tmpB=macro:->\@de@exponent@rg ^1}
+{into \@de@tmpB=macro:->\@definalchosenform }
+{blank space  }
+{\futurelet}
+{reassigning \@detesttoken=blank space  }
+
+~.............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\let}
+{changing \@de@nextact=macro:->\@de@exponent@rg ^1}
+{into \@de@nextact=macro: ->\futurelet \@detesttoken \@denext@rg }
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@de@nextact  ->\futurelet \@detesttoken \@denext@rg 
+{\futurelet}
+{changing \@detesttoken=blank space  }
+{into \@detesttoken=the character =}
+
+~.............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\ifx: (level 2) entered on line 232}
+{false}
+{\else: \ifx (level 2) entered on line 232}
+{\let}
+{changing \@de@nextact=macro: ->\futurelet \@detesttoken \@denext@rg }
+{into \@de@nextact=macro:->\@definalchosenform }
+{\fi: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~.............\@de@nextact ->\@definalchosenform 
+
+~.............\@definalchosenform ->\csname n@st@r@\@de@option \endcsname 
+{\csname}
+
+~.............\@de@option ->\csname @de@not@default\endcsname 
+{\csname}
+
+~..............\@de@not@default ->Leib
+
+~.............\n@st@r@Leib ->\setbox \@deuppb@x \hbox {$ \mkern 0.40mu\@de@perat@r ^{\empty@rexpon }\the \upp@rt@ks $}\b@se@Leib 
+{\setbox}
+{entering hbox group (level 10) at line 232}
+{restricted horizontal mode: math shift character $}
+{entering math shift group (level 11) at line 232}
+{reassigning \fam=-1}
+\everymath->\aftergroup \@ignorefalse \check@mathfonts \the \everymath 
+{math mode: \aftergroup}
+
+~...............\check@mathfonts ->\ifx \glb@currsize \f@size \else \glb@settings \init@restore@glb@settings \fi \let \curr@math@size \f@size \def \init@restore@glb@settings {\aftergroup \restglb@settings }\aftergroup \mv@normal@reset \aftergroup \mv@bold@reset 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+{\let}
+{reassigning \curr@math@size=macro:->10.95}
+{\def}
+{changing \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{into \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{\aftergroup}
+{\aftergroup}
+{\the}
+{blank space  }
+{\mkern}
+
+~.............\@de@perat@r ->\mathrm d
+
+~..............\mathrm ->\protect \mathrm  
+{\relax}
+
+~...............\mathrm  ->\relax \ifmmode \else \non@alpherr \mathrm  \fi \use@mathgroup \M@OT1 \symoperators 
+{\relax}
+{\ifmmode: (level 1) entered on line 232}
+{true}
+{\else: \ifmmode (level 1) entered on line 232}
+{\fi: \ifmmode (level 1) entered on line 232}
+
+~...............\use@mathgroup #1#2->\relax \ifmmode \math@bgroup \expandafter \ifx \csname M@\f@encoding \endcsname #1\else #1\fi \mathgroup #2\relax \expandafter \math@egroup \fi 
+#1<-\M@OT1 
+#2<-\symoperators 
+{\relax}
+{\ifmmode: (level 1) entered on line 232}
+{true}
+{begin-group character {}
+{entering math group (level 12) at line 232}
+{\expandafter}
+{\csname}
+
+~...............\f@encoding ->T1
+{\ifx: (level 2) entered on line 232}
+{true}
+{\else: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 2) entered on line 232}
+{\fam}
+{changing \fam=-1}
+{into \fam=0}
+{\relax}
+{\expandafter}
+{\fi: \ifmmode (level 1) entered on line 232}
+
+~...............\math@egroup #1->#1\egroup 
+#1<-d
+{the letter d}
+{end-group character }}
+{restoring \fam=-1}
+{leaving math group (level 12) entered at line 232}
+{superscript character ^}
+{entering math group (level 12) at line 232}
+
+~.............\empty@rexpon ->\ifnum 2>\expo@de \empty \else \the \expo@de \fi 
+{\ifnum: (level 1) entered on line 232}
+{true}
+
+~..............\empty ->
+{\else: \ifnum (level 1) entered on line 232}
+{\fi: \ifnum (level 1) entered on line 232}
+{end-group character }}
+{leaving math group (level 12) entered at line 232}
+{\the}
+{the letter N}
+{the character (}
+{the letter t}
+{the character )}
+{math shift character $}
+{restoring \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{leaving math shift group (level 11) entered at line 232}
+
+~..............\@ignorefalse ->\global \let \if@ignore \iffalse 
+{restricted horizontal mode: \global}
+{\let}
+{globally changing \if@ignore=\iffalse}
+{into \if@ignore=\iffalse}
+
+~..............\mv@normal@reset ->
+
+~..............\mv@bold@reset ->
+{end-group character }}
+{leaving hbox group (level 10) entered at line 232}
+{changing \box99=void}
+{into \box99=
+\hbox(8.37674+2.35423)x27.30779 []}
+
+~.............\b@se@Leib ->\setbox \@delowb@x \hbox {$ \@de@perat@r \mkern 0.40mu\the \l@wert@ks ^{\empty@rexpon }$}\setbox \@deresb@x \hbox {\kern 0.50\p@ $\raise 2\p@ \box \@deuppb@x \@de@ver \lower 5\p@ \box \@delowb@x $\kern 0.50\p@ }\@derele@se 
+{math mode: \setbox}
+{entering hbox group (level 10) at line 232}
+{restricted horizontal mode: math shift character $}
+{entering math shift group (level 11) at line 232}
+{reassigning \fam=-1}
+\everymath->\aftergroup \@ignorefalse \check@mathfonts \the \everymath 
+{math mode: \aftergroup}
+
+~...............\check@mathfonts ->\ifx \glb@currsize \f@size \else \glb@settings \init@restore@glb@settings \fi \let \curr@math@size \f@size \def \init@restore@glb@settings {\aftergroup \restglb@settings }\aftergroup \mv@normal@reset \aftergroup \mv@bold@reset 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+{\let}
+{reassigning \curr@math@size=macro:->10.95}
+{\def}
+{changing \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{into \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{\aftergroup}
+{\aftergroup}
+{\the}
+{blank space  }
+
+~.............\@de@perat@r ->\mathrm d
+
+~..............\mathrm ->\protect \mathrm  
+{\relax}
+
+~...............\mathrm  ->\relax \ifmmode \else \non@alpherr \mathrm  \fi \use@mathgroup \M@OT1 \symoperators 
+{\relax}
+{\ifmmode: (level 1) entered on line 232}
+{true}
+{\else: \ifmmode (level 1) entered on line 232}
+{\fi: \ifmmode (level 1) entered on line 232}
+
+~...............\use@mathgroup #1#2->\relax \ifmmode \math@bgroup \expandafter \ifx \csname M@\f@encoding \endcsname #1\else #1\fi \mathgroup #2\relax \expandafter \math@egroup \fi 
+#1<-\M@OT1 
+#2<-\symoperators 
+{\relax}
+{\ifmmode: (level 1) entered on line 232}
+{true}
+{begin-group character {}
+{entering math group (level 12) at line 232}
+{\expandafter}
+{\csname}
+
+~...............\f@encoding ->T1
+{\ifx: (level 2) entered on line 232}
+{true}
+{\else: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 2) entered on line 232}
+{\fam}
+{changing \fam=-1}
+{into \fam=0}
+{\relax}
+{\expandafter}
+{\fi: \ifmmode (level 1) entered on line 232}
+
+~...............\math@egroup #1->#1\egroup 
+#1<-d
+{the letter d}
+{end-group character }}
+{restoring \fam=-1}
+{leaving math group (level 12) entered at line 232}
+{\mkern}
+{\the}
+{the letter t}
+{superscript character ^}
+{entering math group (level 12) at line 232}
+
+~.............\empty@rexpon ->\ifnum 2>\expo@de \empty \else \the \expo@de \fi 
+{\ifnum: (level 1) entered on line 232}
+{true}
+
+~..............\empty ->
+{\else: \ifnum (level 1) entered on line 232}
+{\fi: \ifnum (level 1) entered on line 232}
+{end-group character }}
+{leaving math group (level 12) entered at line 232}
+{math shift character $}
+{restoring \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{leaving math shift group (level 11) entered at line 232}
+
+~..............\@ignorefalse ->\global \let \if@ignore \iffalse 
+{restricted horizontal mode: \global}
+{\let}
+{globally changing \if@ignore=\iffalse}
+{into \if@ignore=\iffalse}
+
+~..............\mv@normal@reset ->
+
+~..............\mv@bold@reset ->
+{end-group character }}
+{leaving hbox group (level 10) entered at line 232}
+{changing \box98=void}
+{into \box98=
+\hbox(7.47871+0.12584)x9.73306 []}
+{math mode: \setbox}
+{entering hbox group (level 10) at line 232}
+{restricted horizontal mode: \kern}
+{math shift character $}
+{entering math shift group (level 11) at line 232}
+{reassigning \fam=-1}
+\everymath->\aftergroup \@ignorefalse \check@mathfonts \the \everymath 
+{math mode: \aftergroup}
+
+~...............\check@mathfonts ->\ifx \glb@currsize \f@size \else \glb@settings \init@restore@glb@settings \fi \let \curr@math@size \f@size \def \init@restore@glb@settings {\aftergroup \restglb@settings }\aftergroup \mv@normal@reset \aftergroup \mv@bold@reset 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+{\let}
+{reassigning \curr@math@size=macro:->10.95}
+{\def}
+{changing \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{into \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{\aftergroup}
+{\aftergroup}
+{\the}
+{\raise}
+{\over}
+{\lower}
+{math shift character $}
+{restoring \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{leaving math shift group (level 11) entered at line 232}
+
+~..............\@ignorefalse ->\global \let \if@ignore \iffalse 
+{restricted horizontal mode: \global}
+{\let}
+{globally changing \if@ignore=\iffalse}
+{into \if@ignore=\iffalse}
+
+~..............\mv@normal@reset ->
+
+~..............\mv@bold@reset ->
+{\kern}
+{end-group character }}
+{leaving hbox group (level 10) entered at line 232}
+{changing \box100=void}
+{into \box100=
+\hbox(15.22028+9.72626)x30.70778 []}
+
+~.............\@derele@se ->\noexpand {\box \@deresb@x }
+{math mode: \noexpand}
+{begin-group character {}
+{entering math group (level 10) at line 232}
+{\box}
+{end-group character }}
+{leaving math group (level 10) entered at line 232}
+{the character =}
+{blank space  }
+{the letter N}
+{the character (}
+{the letter t}
+{the character )}
+{blank space  }
+{the character *}
+{blank space  }
+{the letter t}
+{blank space  }
+{end-group character }}
+{restoring \box100=void}
+{restoring \box98=void}
+{restoring \box99=void}
+{restoring \toks28=}
+{restoring \count323=0}
+{restoring \toks27=}
+{restoring \@definalchosenform=undefined}
+{restoring \@deisitorisntitastar=undefined}
+{restoring \@de@nextact=undefined}
+{restoring \@detesttoken=undefined}
+{restoring \@de@tmpB=undefined}
+{restoring \@de@tmpA=undefined}
+{restoring \@dedesiredtoken=undefined}
+{restoring \@de@perat@r=undefined}
+{restoring \tracingassigns=0}
+
+{\tracingrestores}
+{\tracingassigns}
+{into \tracingassigns=1}
+
+~..........\ode ->\let \@de@perat@r =\d@@ \@de@ifst@r 
+{\let}
+{changing \@de@perat@r=undefined}
+{into \@de@perat@r=macro:->\mathrm d}
+
+~...........\@de@ifst@r ->\@deifnextch@r * \@dest@red@rg \@den@st@r@rg 
+
+~...........\@deifnextch@r #1#2#3-> \let \@dedesiredtoken =#1\relax \def \@de@tmpA {#2}\def \@de@tmpB {#3} \futurelet \@detesttoken \@denext@rg 
+#1<-*
+#2<-\@dest@red@rg 
+#3<-\@den@st@r@rg 
+{blank space  }
+{\let}
+{changing \@dedesiredtoken=undefined}
+{into \@dedesiredtoken=the character *}
+{\relax}
+{\def}
+{changing \@de@tmpA=undefined}
+{into \@de@tmpA=macro:->\@dest@red@rg }
+{\def}
+{changing \@de@tmpB=undefined}
+{into \@de@tmpB=macro:->\@den@st@r@rg }
+{blank space  }
+{\futurelet}
+{changing \@detesttoken=undefined}
+{into \@detesttoken=the letter N}
+
+~............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\ifx: (level 2) entered on line 232}
+{false}
+{\else: \ifx (level 2) entered on line 232}
+{\let}
+{changing \@de@nextact=undefined}
+{into \@de@nextact=macro:->\@den@st@r@rg }
+{\fi: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@de@nextact ->\@den@st@r@rg 
+
+~............\@den@st@r@rg ->\@de@isst@r {n@st@r} \@de@ifbr@ck 
+
+~............\@de@isst@r #1->\def \@deisitorisntitastar {\csname @de#1y@ink\endcsname }\def \@definalchosenform {\csname #1@\@de@option \endcsname }
+#1<-n@st@r
+{\def}
+{changing \@deisitorisntitastar=undefined}
+{into \@deisitorisntitastar=macro:->\csname @den@st@ry@ink\endcsname }
+{\def}
+{changing \@definalchosenform=undefined}
+{into \@definalchosenform=macro:->\csname n@st@r@\@de@option \endcsname }
+{blank space  }
+
+~............\@de@ifbr@ck ->\@deifnextch@r [\@de@ption@l@rg {\@de@ption@l@rg [t]}
+
+~............\@deifnextch@r #1#2#3-> \let \@dedesiredtoken =#1\relax \def \@de@tmpA {#2}\def \@de@tmpB {#3} \futurelet \@detesttoken \@denext@rg 
+#1<-[
+#2<-\@de@ption@l@rg 
+#3<-\@de@ption@l@rg [t]
+{blank space  }
+{\let}
+{changing \@dedesiredtoken=the character *}
+{into \@dedesiredtoken=the character [}
+{\relax}
+{\def}
+{changing \@de@tmpA=macro:->\@dest@red@rg }
+{into \@de@tmpA=macro:->\@de@ption@l@rg }
+{\def}
+{changing \@de@tmpB=macro:->\@den@st@r@rg }
+{into \@de@tmpB=macro:->\@de@ption@l@rg [t]}
+{blank space  }
+{\futurelet}
+{reassigning \@detesttoken=the letter N}
+
+~............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\ifx: (level 2) entered on line 232}
+{false}
+{\else: \ifx (level 2) entered on line 232}
+{\let}
+{changing \@de@nextact=macro:->\@den@st@r@rg }
+{into \@de@nextact=macro:->\@de@ption@l@rg [t]}
+{\fi: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@de@nextact ->\@de@ption@l@rg [t]
+
+~............\@de@ption@l@rg [#1]->\expandafter \l@wert@ks {#1}\relax \@de@ifexpon 
+#1<-t
+{\expandafter}
+{\toks27}
+{changing \toks27=}
+{into \toks27=t}
+{\relax}
+
+~............\@de@ifexpon ->\@deifnextch@r ^\@de@exponent@rg {\@de@exponent@rg ^1}
+
+~............\@deifnextch@r #1#2#3-> \let \@dedesiredtoken =#1\relax \def \@de@tmpA {#2}\def \@de@tmpB {#3} \futurelet \@detesttoken \@denext@rg 
+#1<-^
+#2<-\@de@exponent@rg 
+#3<-\@de@exponent@rg ^1
+{blank space  }
+{\let}
+{changing \@dedesiredtoken=the character [}
+{into \@dedesiredtoken=superscript character ^}
+{\relax}
+{\def}
+{changing \@de@tmpA=macro:->\@de@ption@l@rg }
+{into \@de@tmpA=macro:->\@de@exponent@rg }
+{\def}
+{changing \@de@tmpB=macro:->\@de@ption@l@rg [t]}
+{into \@de@tmpB=macro:->\@de@exponent@rg ^1}
+{blank space  }
+{\futurelet}
+{reassigning \@detesttoken=the letter N}
+
+~............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\ifx: (level 2) entered on line 232}
+{false}
+{\else: \ifx (level 2) entered on line 232}
+{\let}
+{changing \@de@nextact=macro:->\@de@ption@l@rg [t]}
+{into \@de@nextact=macro:->\@de@exponent@rg ^1}
+{\fi: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@de@nextact ->\@de@exponent@rg ^1
+
+~............\@de@exponent@rg ^#1->\expo@de #1\relax \@deisitorisntitastar 
+#1<-1
+{\count323}
+{changing \count323=0}
+{into \count323=1}
+{\relax}
+
+~............\@deisitorisntitastar ->\csname @den@st@ry@ink\endcsname 
+{\csname}
+
+~............\@den@st@ry@ink ->\expandafter \@de@y@inkf@rm 
+{\expandafter}
+
+~............\@de@y@inkf@rm ->\csname @de@func@\@de@option \endcsname 
+{\csname}
+
+~............\@de@option ->\csname @de@not@default\endcsname 
+{\csname}
+
+~.............\@de@not@default ->Leib
+
+~............\@de@func@Leib ->\expandafter \@defuncg@bbler 
+{\expandafter}
+
+~............\@defuncg@bbler #1->\beginnext \toks 0={\the \upp@rt@ks #1} \edef \next {\upp@rt@ks =\expandafter {\the \toks 0}} \endnext \@deifnotsp@ce 
+#1<-N
+
+~...........\beginnext ->\begingroup \let \next \undefined 
+{\begingroup}
+{entering semi simple group (level 8) at line 232}
+{\let}
+{changing \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{into \next=undefined}
+{\toks}
+{changing \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{into \toks0=\the \upp@rt@ks N}
+{blank space  }
+{\edef}
+{\expandafter}
+{\the}
+{changing \next=undefined}
+{into \next=macro:->\upp@rt@ks ={N}}
+{blank space  }
+
+~...........\endnext ->\expandafter \endgroup \next 
+{\expandafter}
+
+~............\next ->\upp@rt@ks ={N}
+{\endgroup}
+{restoring \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{restoring \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{leaving semi simple group (level 8) entered at line 232}
+{\toks28}
+{changing \toks28=}
+{into \toks28=N}
+
+~...........\@deifnotsp@ce ->\futurelet \@detesttoken \@det@kmucher 
+{\futurelet}
+{changing \@detesttoken=the letter N}
+{into \@detesttoken=the character (}
+
+~............\@det@kmucher ->\ifx \@detesttoken \@sptoken \expandafter \@deif@tpos \else \expandafter \@defuncg@bbler \fi 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\expandafter}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@defuncg@bbler #1->\beginnext \toks 0={\the \upp@rt@ks #1} \edef \next {\upp@rt@ks =\expandafter {\the \toks 0}} \endnext \@deifnotsp@ce 
+#1<-(
+
+~...........\beginnext ->\begingroup \let \next \undefined 
+{\begingroup}
+{entering semi simple group (level 8) at line 232}
+{\let}
+{changing \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{into \next=undefined}
+{\toks}
+{changing \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{into \toks0=\the \upp@rt@ks (}
+{blank space  }
+{\edef}
+{\expandafter}
+{\the}
+{changing \next=undefined}
+{into \next=macro:->\upp@rt@ks ={N(}}
+{blank space  }
+
+~...........\endnext ->\expandafter \endgroup \next 
+{\expandafter}
+
+~............\next ->\upp@rt@ks ={N(}
+{\endgroup}
+{restoring \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{restoring \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{leaving semi simple group (level 8) entered at line 232}
+{\toks28}
+{changing \toks28=N}
+{into \toks28=N(}
+
+~...........\@deifnotsp@ce ->\futurelet \@detesttoken \@det@kmucher 
+{\futurelet}
+{changing \@detesttoken=the character (}
+{into \@detesttoken=the letter t}
+
+~............\@det@kmucher ->\ifx \@detesttoken \@sptoken \expandafter \@deif@tpos \else \expandafter \@defuncg@bbler \fi 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\expandafter}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@defuncg@bbler #1->\beginnext \toks 0={\the \upp@rt@ks #1} \edef \next {\upp@rt@ks =\expandafter {\the \toks 0}} \endnext \@deifnotsp@ce 
+#1<-t
+
+~...........\beginnext ->\begingroup \let \next \undefined 
+{\begingroup}
+{entering semi simple group (level 8) at line 232}
+{\let}
+{changing \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{into \next=undefined}
+{\toks}
+{changing \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{into \toks0=\the \upp@rt@ks t}
+{blank space  }
+{\edef}
+{\expandafter}
+{\the}
+{changing \next=undefined}
+{into \next=macro:->\upp@rt@ks ={N(t}}
+{blank space  }
+
+~...........\endnext ->\expandafter \endgroup \next 
+{\expandafter}
+
+~............\next ->\upp@rt@ks ={N(t}
+{\endgroup}
+{restoring \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{restoring \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{leaving semi simple group (level 8) entered at line 232}
+{\toks28}
+{changing \toks28=N(}
+{into \toks28=N(t}
+
+~...........\@deifnotsp@ce ->\futurelet \@detesttoken \@det@kmucher 
+{\futurelet}
+{changing \@detesttoken=the letter t}
+{into \@detesttoken=the character )}
+
+~............\@det@kmucher ->\ifx \@detesttoken \@sptoken \expandafter \@deif@tpos \else \expandafter \@defuncg@bbler \fi 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\expandafter}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@defuncg@bbler #1->\beginnext \toks 0={\the \upp@rt@ks #1} \edef \next {\upp@rt@ks =\expandafter {\the \toks 0}} \endnext \@deifnotsp@ce 
+#1<-)
+
+~...........\beginnext ->\begingroup \let \next \undefined 
+{\begingroup}
+{entering semi simple group (level 8) at line 232}
+{\let}
+{changing \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{into \next=undefined}
+{\toks}
+{changing \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{into \toks0=\the \upp@rt@ks )}
+{blank space  }
+{\edef}
+{\expandafter}
+{\the}
+{changing \next=undefined}
+{into \next=macro:->\upp@rt@ks ={N(t)}}
+{blank space  }
+
+~...........\endnext ->\expandafter \endgroup \next 
+{\expandafter}
+
+~............\next ->\upp@rt@ks ={N(t)}
+{\endgroup}
+{restoring \toks0=\def \UrlTildeSpecial {\do \~{\raise \ETC.}
+{restoring \next=macro:->\pgfrcs@final {tikzlibraryquot\ETC.}
+{leaving semi simple group (level 8) entered at line 232}
+{\toks28}
+{changing \toks28=N(t}
+{into \toks28=N(t)}
+
+~...........\@deifnotsp@ce ->\futurelet \@detesttoken \@det@kmucher 
+{\futurelet}
+{changing \@detesttoken=the character )}
+{into \@detesttoken=blank space  }
+
+~............\@det@kmucher ->\ifx \@detesttoken \@sptoken \expandafter \@deif@tpos \else \expandafter \@defuncg@bbler \fi 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\expandafter}
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@deif@tpos ->\@deifnextch@r a \@de@tfinder \@definalchosenform 
+
+~............\@deifnextch@r #1#2#3-> \let \@dedesiredtoken =#1\relax \def \@de@tmpA {#2}\def \@de@tmpB {#3} \futurelet \@detesttoken \@denext@rg 
+#1<-a
+#2<-\@de@tfinder 
+#3<-\@definalchosenform 
+{blank space  }
+{\let}
+{changing \@dedesiredtoken=superscript character ^}
+{into \@dedesiredtoken=the letter a}
+{\relax}
+{\def}
+{changing \@de@tmpA=macro:->\@de@exponent@rg }
+{into \@de@tmpA=macro:->\@de@tfinder }
+{\def}
+{changing \@de@tmpB=macro:->\@de@exponent@rg ^1}
+{into \@de@tmpB=macro:->\@definalchosenform }
+{blank space  }
+{\futurelet}
+{reassigning \@detesttoken=blank space  }
+
+~............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\let}
+{changing \@de@nextact=macro:->\@de@exponent@rg ^1}
+{into \@de@nextact=macro: ->\futurelet \@detesttoken \@denext@rg }
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@de@nextact  ->\futurelet \@detesttoken \@denext@rg 
+{\futurelet}
+{changing \@detesttoken=blank space  }
+{into \@detesttoken=the character =}
+
+~............\@denext@rg ->\ifx \@detesttoken \@sptoken \let \@de@nextact \@degobblesp@ce \else \ifx \@detesttoken \@dedesiredtoken \let \@de@nextact \@de@tmpA \else \let \@de@nextact \@de@tmpB \fi \fi \@de@nextact 
+{\ifx: (level 1) entered on line 232}
+{false}
+{\else: \ifx (level 1) entered on line 232}
+{\ifx: (level 2) entered on line 232}
+{false}
+{\else: \ifx (level 2) entered on line 232}
+{\let}
+{changing \@de@nextact=macro: ->\futurelet \@detesttoken \@denext@rg }
+{into \@de@nextact=macro:->\@definalchosenform }
+{\fi: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+
+~............\@de@nextact ->\@definalchosenform 
+
+~............\@definalchosenform ->\csname n@st@r@\@de@option \endcsname 
+{\csname}
+
+~............\@de@option ->\csname @de@not@default\endcsname 
+{\csname}
+
+~.............\@de@not@default ->Leib
+
+~............\n@st@r@Leib ->\setbox \@deuppb@x \hbox {$ \mkern 0.40mu\@de@perat@r ^{\empty@rexpon }\the \upp@rt@ks $}\b@se@Leib 
+{\setbox}
+{entering hbox group (level 8) at line 232}
+{restricted horizontal mode: math shift character $}
+{entering math shift group (level 9) at line 232}
+{reassigning \fam=-1}
+\everymath->\aftergroup \@ignorefalse \check@mathfonts \the \everymath 
+{math mode: \aftergroup}
+
+~..............\check@mathfonts ->\ifx \glb@currsize \f@size \else \glb@settings \init@restore@glb@settings \fi \let \curr@math@size \f@size \def \init@restore@glb@settings {\aftergroup \restglb@settings }\aftergroup \mv@normal@reset \aftergroup \mv@bold@reset 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+{\let}
+{reassigning \curr@math@size=macro:->10.95}
+{\def}
+{changing \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{into \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{\aftergroup}
+{\aftergroup}
+{\the}
+{blank space  }
+{\mkern}
+
+~............\@de@perat@r ->\mathrm d
+
+~.............\mathrm ->\protect \mathrm  
+{\relax}
+
+~..............\mathrm  ->\relax \ifmmode \else \non@alpherr \mathrm  \fi \use@mathgroup \M@OT1 \symoperators 
+{\relax}
+{\ifmmode: (level 1) entered on line 232}
+{true}
+{\else: \ifmmode (level 1) entered on line 232}
+{\fi: \ifmmode (level 1) entered on line 232}
+
+~..............\use@mathgroup #1#2->\relax \ifmmode \math@bgroup \expandafter \ifx \csname M@\f@encoding \endcsname #1\else #1\fi \mathgroup #2\relax \expandafter \math@egroup \fi 
+#1<-\M@OT1 
+#2<-\symoperators 
+{\relax}
+{\ifmmode: (level 1) entered on line 232}
+{true}
+{begin-group character {}
+{entering math group (level 10) at line 232}
+{\expandafter}
+{\csname}
+
+~..............\f@encoding ->T1
+{\ifx: (level 2) entered on line 232}
+{true}
+{\else: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 2) entered on line 232}
+{\fam}
+{changing \fam=-1}
+{into \fam=0}
+{\relax}
+{\expandafter}
+{\fi: \ifmmode (level 1) entered on line 232}
+
+~..............\math@egroup #1->#1\egroup 
+#1<-d
+{the letter d}
+{end-group character }}
+{restoring \fam=-1}
+{leaving math group (level 10) entered at line 232}
+{superscript character ^}
+{entering math group (level 10) at line 232}
+
+~............\empty@rexpon ->\ifnum 2>\expo@de \empty \else \the \expo@de \fi 
+{\ifnum: (level 1) entered on line 232}
+{true}
+
+~.............\empty ->
+{\else: \ifnum (level 1) entered on line 232}
+{\fi: \ifnum (level 1) entered on line 232}
+{end-group character }}
+{leaving math group (level 10) entered at line 232}
+{\the}
+{the letter N}
+{the character (}
+{the letter t}
+{the character )}
+{math shift character $}
+{restoring \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{leaving math shift group (level 9) entered at line 232}
+
+~.............\@ignorefalse ->\global \let \if@ignore \iffalse 
+{restricted horizontal mode: \global}
+{\let}
+{globally changing \if@ignore=\iffalse}
+{into \if@ignore=\iffalse}
+
+~.............\mv@normal@reset ->
+
+~.............\mv@bold@reset ->
+{end-group character }}
+{leaving hbox group (level 8) entered at line 232}
+{changing \box99=void}
+{into \box99=
+\hbox(8.37674+2.35423)x27.30779 []}
+
+~............\b@se@Leib ->\setbox \@delowb@x \hbox {$ \@de@perat@r \mkern 0.40mu\the \l@wert@ks ^{\empty@rexpon }$}\setbox \@deresb@x \hbox {\kern 0.50\p@ $\raise 2\p@ \box \@deuppb@x \@de@ver \lower 5\p@ \box \@delowb@x $\kern 0.50\p@ }\@derele@se 
+{math mode: \setbox}
+{entering hbox group (level 8) at line 232}
+{restricted horizontal mode: math shift character $}
+{entering math shift group (level 9) at line 232}
+{reassigning \fam=-1}
+\everymath->\aftergroup \@ignorefalse \check@mathfonts \the \everymath 
+{math mode: \aftergroup}
+
+~..............\check@mathfonts ->\ifx \glb@currsize \f@size \else \glb@settings \init@restore@glb@settings \fi \let \curr@math@size \f@size \def \init@restore@glb@settings {\aftergroup \restglb@settings }\aftergroup \mv@normal@reset \aftergroup \mv@bold@reset 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+{\let}
+{reassigning \curr@math@size=macro:->10.95}
+{\def}
+{changing \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{into \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{\aftergroup}
+{\aftergroup}
+{\the}
+{blank space  }
+
+~............\@de@perat@r ->\mathrm d
+
+~.............\mathrm ->\protect \mathrm  
+{\relax}
+
+~..............\mathrm  ->\relax \ifmmode \else \non@alpherr \mathrm  \fi \use@mathgroup \M@OT1 \symoperators 
+{\relax}
+{\ifmmode: (level 1) entered on line 232}
+{true}
+{\else: \ifmmode (level 1) entered on line 232}
+{\fi: \ifmmode (level 1) entered on line 232}
+
+~..............\use@mathgroup #1#2->\relax \ifmmode \math@bgroup \expandafter \ifx \csname M@\f@encoding \endcsname #1\else #1\fi \mathgroup #2\relax \expandafter \math@egroup \fi 
+#1<-\M@OT1 
+#2<-\symoperators 
+{\relax}
+{\ifmmode: (level 1) entered on line 232}
+{true}
+{begin-group character {}
+{entering math group (level 10) at line 232}
+{\expandafter}
+{\csname}
+
+~..............\f@encoding ->T1
+{\ifx: (level 2) entered on line 232}
+{true}
+{\else: \ifx (level 2) entered on line 232}
+{\fi: \ifx (level 2) entered on line 232}
+{\fam}
+{changing \fam=-1}
+{into \fam=0}
+{\relax}
+{\expandafter}
+{\fi: \ifmmode (level 1) entered on line 232}
+
+~..............\math@egroup #1->#1\egroup 
+#1<-d
+{the letter d}
+{end-group character }}
+{restoring \fam=-1}
+{leaving math group (level 10) entered at line 232}
+{\mkern}
+{\the}
+{the letter t}
+{superscript character ^}
+{entering math group (level 10) at line 232}
+
+~............\empty@rexpon ->\ifnum 2>\expo@de \empty \else \the \expo@de \fi 
+{\ifnum: (level 1) entered on line 232}
+{true}
+
+~.............\empty ->
+{\else: \ifnum (level 1) entered on line 232}
+{\fi: \ifnum (level 1) entered on line 232}
+{end-group character }}
+{leaving math group (level 10) entered at line 232}
+{math shift character $}
+{restoring \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{leaving math shift group (level 9) entered at line 232}
+
+~.............\@ignorefalse ->\global \let \if@ignore \iffalse 
+{restricted horizontal mode: \global}
+{\let}
+{globally changing \if@ignore=\iffalse}
+{into \if@ignore=\iffalse}
+
+~.............\mv@normal@reset ->
+
+~.............\mv@bold@reset ->
+{end-group character }}
+{leaving hbox group (level 8) entered at line 232}
+{changing \box98=void}
+{into \box98=
+\hbox(7.47871+0.12584)x9.73306 []}
+{math mode: \setbox}
+{entering hbox group (level 8) at line 232}
+{restricted horizontal mode: \kern}
+{math shift character $}
+{entering math shift group (level 9) at line 232}
+{reassigning \fam=-1}
+\everymath->\aftergroup \@ignorefalse \check@mathfonts \the \everymath 
+{math mode: \aftergroup}
+
+~..............\check@mathfonts ->\ifx \glb@currsize \f@size \else \glb@settings \init@restore@glb@settings \fi \let \curr@math@size \f@size \def \init@restore@glb@settings {\aftergroup \restglb@settings }\aftergroup \mv@normal@reset \aftergroup \mv@bold@reset 
+{\ifx: (level 1) entered on line 232}
+{true}
+{\else: \ifx (level 1) entered on line 232}
+{\fi: \ifx (level 1) entered on line 232}
+{\let}
+{reassigning \curr@math@size=macro:->10.95}
+{\def}
+{changing \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{into \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{\aftergroup}
+{\aftergroup}
+{\the}
+{\raise}
+{\over}
+{\lower}
+{math shift character $}
+{restoring \init@restore@glb@settings=macro:->\aftergroup \restglb@settings }
+{leaving math shift group (level 9) entered at line 232}
+
+~.............\@ignorefalse ->\global \let \if@ignore \iffalse 
+{restricted horizontal mode: \global}
+{\let}
+{globally changing \if@ignore=\iffalse}
+{into \if@ignore=\iffalse}
+
+~.............\mv@normal@reset ->
+
+~.............\mv@bold@reset ->
+{\kern}
+{end-group character }}
+{leaving hbox group (level 8) entered at line 232}
+{changing \box100=void}
+{into \box100=
+\hbox(15.22028+9.72626)x30.70778 []}
+
+~............\@derele@se ->\noexpand {\box \@deresb@x }
+{math mode: \noexpand}
+{begin-group character {}
+{entering math group (level 8) at line 232}
+{\box}
+{end-group character }}
+{leaving math group (level 8) entered at line 232}
+{the character =}
+{blank space  }
+{the letter N}
+{the character (}
+{the letter t}
+{the character )}
+{blank space  }
+{the character *}
+{blank space  }
+{the letter t}
+{blank space  }
+{end-group character }}
+{restoring \box100=void}
+{restoring \box98=void}
+{restoring \box99=void}
+{restoring \toks28=}
+{restoring \count323=0}
+{restoring \toks27=}
+{restoring \@definalchosenform=undefined}
+{restoring \@deisitorisntitastar=undefined}
+{restoring \@de@nextact=undefined}
+{restoring \@detesttoken=undefined}
+{restoring \@de@tmpB=undefined}
+{restoring \@de@tmpA=undefined}
+{restoring \@dedesiredtoken=undefined}
+{restoring \@de@perat@r=undefined}
+{restoring \tracingassigns=0}
+
+Overfull \hbox (20.98402pt too wide) in paragraph at lines 240--244
+[][][]\T1/ptm/m/n/10.95 In the case of La-grange or Net-won no-ta-tion, there is the \T1/cmtt/m/n/10.95 \setDE{$\U/FdSymbolF/m/n/10.95 …$[]\T1/cmtt/m/it/10.95 maxprimes=integer$\U/FdSymbolF/m/n/10.95 ‹$[]\T1/cmtt/m/n/10.95 }
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+ []
+
+[2] [3]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 266.
+
+
+Overfull \hbox (2.54916pt too wide) in paragraph at lines 284--284
+[]\T1/cmtt/m/n/10 \ode a(x)      && \ode[x]{b(x)} && \ode^1 c(x)     && \ode[x]^5 {d(x)} \\[] 
+ []
+
+
+Overfull \hbox (2.54916pt too wide) in paragraph at lines 284--284
+[]\T1/cmtt/m/n/10 \ode* {e(x)}   && \ode*[x] f(x) && \ode*^2 {g(x)}  && \ode*[x]^6h(x)   \\[] 
+ []
+
+
+Overfull \hbox (2.54916pt too wide) in paragraph at lines 284--284
+[]\T1/cmtt/m/n/10 \pde[t] i(x)   && \pde[x] {j(x)}&& \pde[t]^3k(x)   && \pde[x]^7 {l(x)} \\[] 
+ []
+
+
+Overfull \hbox (31.32294pt too wide) in paragraph at lines 286--297
+ []  
+ []
+
+
+Overfull \hbox (20.0062pt too wide) in paragraph at lines 297--308
+ [] 
+ []
+
+
+Overfull \hbox (8.68945pt too wide) in paragraph at lines 308--319
+ [] 
+ []
+
+[4]
+Overfull \hbox (3.6882pt too wide) in paragraph at lines 360--360
+[]    \T1/cmtt/m/n/10 \ode[x]  c at 23\pi;   &= i \\[] 
+ []
+
+
+Overfull \hbox (3.6882pt too wide) in paragraph at lines 360--360
+[]    \T1/cmtt/m/n/10 \ode[x]^3   c at 69;   &= i \\[] 
+ []
+
+
+Overfull \hbox (3.6882pt too wide) in paragraph at lines 360--360
+[]    \T1/cmtt/m/n/10 \ode[x]^{69} c at L;+t &= i \\[] 
+ []
+
+
+Overfull \hbox (3.6882pt too wide) in paragraph at lines 360--360
+[]    \T1/cmtt/m/n/10 \ode[x]^9  c af 420;   &= i \\[] 
+ []
+
+
+Overfull \hbox (13.00955pt too wide) in paragraph at lines 363--409
+[]|  []|  [] 
+ []
+
+[5]
+Overfull \hbox (13.00955pt too wide) in paragraph at lines 434--481
+[]|  []|  [] 
+ []
+
+[6] [7]
+Overfull \hbox (3.53125pt too wide) in paragraph at lines 670--670
+ [][]\T1/cmtt/m/n/10 \DeclareOptionX*{\PackageWarning{odesandpdes}{`\CurrentOption' ignored}} 
+ []
+
+[8] [9] [10] [11] [12] [13]
+Overfull \hbox (14.02869pt too wide) in paragraph at lines 1208--1208
+ [][]    \T1/cmtt/m/n/10 \hbox to 5\p@{\hss\raise0.50ex\hbox{$\scriptstyle\empty@rexpon$}\hss}% 
+ []
+
+No file odesandpdes.gls.
+**********************************
+* This macro file has no checksum!
+* The checksum should be 554!
+**********************************
+) [14] (.Output/odesandpdes.aux)
+Package rerunfilecheck Info: File `odesandpdes.out' has not changed.
+(rerunfilecheck)             Checksum: 55E9C1136F4D83193D17831A8E5B8546;3300.
+Package rerunfilecheck Info: File `odesandpdes.hd' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 26257 strings out of 476037
+ 469693 string characters out of 5794152
+ 1889779 words of memory out of 5000000
+ 46237 multiletter control sequences out of 15000+600000
+ 589841 words of font info for 164 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 102i,20n,104p,422b,1581s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/fdsymbol/FdSymbolA-Book.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/fdsymbol/FdSymbolB-Book.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/fdsymbol/FdSymbolF-Book.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/symbol/usyr.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on .Output/odesandpdes.pdf (14 pages, 232153 bytes).
+PDF statistics:
+ 255 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+

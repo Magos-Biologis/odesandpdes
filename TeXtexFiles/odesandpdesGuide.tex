@@ -109,15 +109,15 @@ very quickly, and very easily building complex interactions
 of differentials.
 The quick functional break down of each element that comprises the macro;
 \newline
-\centerline{ \cs{ode}\meta{star}\oarg{variable}\string^\meta{degree}
-\marg{function}at\textvisiblespace\meta{position};}\vspace{1ex}
+\centerline{ \cs{ode}\meta{star}\oarg{variable}\string^\meta{degree}%
+\marg{function} at\textvisiblespace\meta{position};}\vspace{1ex}
 \par\hbox to \textwidth{\hss
 \begin{tabular}{cl}\hline
    Argument &  Usage \\ \hline
    \oarg{variable} & The variable being derived \\ 
-   \meta{degree} & The order/degree of the derivative \\
+   \string^\meta{degree} & The order/degree of the derivative \\
    \marg{function} & The function being derived \\
-   \textvisiblespace at\textvisiblespace\meta{point}; 
+   at\textvisiblespace\meta{point}; 
       & Where the function is being derived \\ \hline
 \end{tabular}\hss}\vspace{1ex}
 All arguments are conditionally optional, only the function is
@@ -170,9 +170,9 @@ will be represented as the variable being derived.
 While the \emph{mandatory} \marg{function} argument will be the function you
 are deriving. 
 Say you wish to indicate you are deriving $X(t)$, simple as writing 
-|\ode[t]{X}|, however, its worth noting that $t$ is the default variable
-so writing |\ode{X}| will produce identical results.
-Hence |\ode[t]{X} = \ode{X}| will produce;
+\cs{ode[t]\{X\}}, however, its worth noting that $t$ is the default variable
+so writing \cs{ode\{X\}} will produce identical results.
+Hence \cs{ode[t]\{X\}=}\cs{ode\{X\}} will produce;
 \begin{equation*} |\ode[t]{X} =\ode{X}| \implies \ode[t]{X} = \ode{X} 
 \end{equation*}
  
@@ -185,9 +185,8 @@ Therefor, writing the exact same equation, just starred
 \begin{equation*} |\ode*[t]{X} =\ode*{X}| \implies \ode*[t]{X} = \ode*{X} 
 \end{equation*}
 Effectively one can rewrite the `bare-bones' display as:\par\vspace{1ex}
-\par\hbox to \textwidth{\hss
-\cs{ode}\meta{star}\oarg{variable}\marg{ function}
-\hss}
+\par\centerline{
+\cs{ode}\meta{star}\oarg{variable}\marg{ function}}
 
 \subsubsection*{Degree of Derivative}
 The previously shown stated section is something the reader has
@@ -195,7 +194,7 @@ likely encountered before, made themselves. This is where
 this package begins to differentiate\footnote{Calculus Pun!} itself.
 Consider:
 \par\hbox to \textwidth{\hss
-\cs{ode}\meta{star}\oarg{variable}$\uparrow$\meta{degree}\marg{function}
+\cs{ode}\meta{star}\oarg{variable}\string^\meta{degree}\marg{function}
 \hss}
 
 A feature of this family of commands, is that it can `\emph{easily}'
@@ -206,13 +205,14 @@ the end after the function.
 As, often you would want add a higher degree very
 quickly as opposed to \emph{after} defining the function. 
 
-\hbox to \textwidth{\hss
-\cs{ode}|^2{f(x)}| as opposed to \cs{ode\{f(x)\}}|^2| \hss}
+\centerline{\cs{ode}\string^|2{f(x)}| as 
+opposed to \cs{ode\{f(x)\}}\string^|2|}
 
 
 This was one of the main motivations of creating a package to begin with
 as instead of needing, maybe, two personalized commands,
-such as ``|\ddt{f}| and |\ddxx{f}|'', or ``|\dd{x}{f}| and |\dd[2]{x}{f}|''.
+such as ``\cs{ddt\{f\}} and \cs{ddxx\{f\}}'', or ``\cs{dd\{x\}\{f\}} and
+\cs{dd[2]\{x\}\{f\}}''.
 One simply needs to treat the \cs{ode} macro itself as being raised
 to a higher degree.
 \begin{equation*} |\ode* \left(\ode{f} \right)=\ode^2{f} | 
@@ -227,10 +227,10 @@ write up the boundry conditions of your problem.
 One could always make another macro, in what is no doubt an impressive
 display of differential shortcuts.
 \emph{Or}: \vspace{1ex}
-\par\hbox to \textwidth{\hss
-\cs{ode}\meta{star}\oarg{variable}$\uparrow$\meta{degree}\marg{
-function}\textvisiblespace{}at\textvisiblespace{}\meta{postion};
-\hss}
+\par\centerline{
+\cs{ode}\meta{star}\oarg{variable}\string^\meta{degree}\marg{
+function} at\textvisiblespace{}\meta{postion};
+}
 
 See, \TeX\ does something very interesting when it uses `\emph{glue}',
 which is partially replicated by packages such as |TikZ|, where it will
@@ -285,7 +285,7 @@ respect to each of the notational styles.
 There is a variety of spacing and bracketing to help highlight these features,
 and will be shown in the following |verbatim| enviroment; 
 
-
+\noindent
 \begin{minipage}{0.98\textwidth}
 \begin{verbatim}
 \begin{align*}
@@ -297,8 +297,10 @@ and will be shown in the following |verbatim| enviroment;
 \end{verbatim}
 \end{minipage}
 
+\noindent
 \vbox{\centering
-\hbox{\verb|\setDE{notation=Lagrange}| \emph{and/or} \verb|\usepackage[notation=Lagrange]{odesandpdes}|}
+\centerline{\cs{setDE\{notation=\meta{Lagrange}\}} \emph{and/or}
+ \cs{usepackage[notation=\meta{Lagrange}]\{odesandpdes\}}}
 \fbox{\parbox{0.65\textwidth}{
 \setDE{notation=Lagrange}
 \begin{align*}
@@ -310,7 +312,8 @@ and will be shown in the following |verbatim| enviroment;
 }}}\vspace{1.25em}
 
 \vbox{\centering
-\hbox{\verb|\setDE{notation=Leibniz}| \emph{and/or} \verb|\usepackage[notation=Leibniz]{odesandpdes}|}
+\centerline{\cs{setDE\{notation=\meta{Leibniz}\}} \emph{and/or}
+ \cs{usepackage[notation=\meta{Leibniz}]\{odesandpdes\}}}
 \fbox{\parbox{0.65\textwidth}{
 \setDE{notation=Leibniz}
 \begin{align*}
@@ -322,7 +325,8 @@ and will be shown in the following |verbatim| enviroment;
 }}}\vspace{1.25em}
 
 \vbox{\centering
-\hbox{\verb|\setDE{notation=Newton}| \emph{and/or} \verb|\usepackage[notation=Newton]{odesandpdes}|}
+\centerline{\cs{setDE\{notation=\meta{Newton}\}} \emph{and/or}
+\cs{usepackage[notation=\meta{Newton}]\{odesandpdes\}}}
 \fbox{\parbox{0.65\textwidth}{
 \setDE{notation=Newton}
 \begin{align*}
@@ -334,7 +338,8 @@ and will be shown in the following |verbatim| enviroment;
 }}}
 
 \vbox{\centering
-\hbox{\verb|\setDE{maxprimes=7}| \emph{and/or} \verb|\usepackage[maxprimes=7]{odesandpdes}|}
+\centerline{\cs{setDE\{maxprimes=\meta{7}\}} \emph{and/or}
+\cs{usepackage[maxprimes=\meta{7}]\{odesandpdes\}}}
 \fbox{\parbox{0.65\textwidth}{
 \setDE{notation=Lagrange,maxprimes=7}
 \begin{align*}
@@ -356,7 +361,7 @@ and will be shown in the following |verbatim| enviroment;
 
 
 \hspace{1em} Now, because the author is not an insane person, and went through the 
-effort of learning how TEX deconstructs text into constitute 
+effort of learning how \TeX\ deconstructs text into constitute 
 registries and boxes, the way any sane person might. When using 
 a non-starred version of a command, after the function is defined, you can
 place an `|at|\textvisiblespace\meta{point}|;|', and the representation will 
@@ -381,9 +386,7 @@ shown according to notational convention.
 \hbox{\begin{minipage}[t]{0.35\textwidth}
 \setDE{notation=Lagrange}
 \noindent\setlength{\jot}{2em}
-\begin{verbatim}
-\setDE{notation=Lagrange}
-\end{verbatim}
+\centerline{\scriptsize\cs{setDE\{notation=\meta{Lagrange}\}}}
 \vspace{-1em}
 \begin{align*}
    \ode[x]  c at 23\pi;   &= 1 \\
@@ -396,9 +399,7 @@ shown according to notational convention.
 \hbox{\begin{minipage}[t]{0.34\textwidth}
 \setDE{notation=Leibniz} 
 \noindent\setlength{\jot}{0.70em}
-\begin{verbatim}
-\setDE{notation=Leibniz}
-\end{verbatim}
+\centerline{\scriptsize\cs{setDE\{notation=\meta{Leibniz}\}}}
 \vspace{-1em}
 \begin{align*}
    \ode[x]  c at 23\pi;   &= 1 \\
@@ -412,9 +413,7 @@ shown according to notational convention.
 \hbox{\begin{minipage}[t]{0.32\textwidth}
 \setDE{notation=Newton}
 \noindent\setlength{\jot}{1.75em}
-\begin{verbatim}
-\setDE{notation=Newton}
-\end{verbatim}
+\centerline{\scriptsize\cs{setDE\{notation=\meta{Newton}\}}}
 \vspace{-1em}
 \begin{align*}
    \ode[x]  c at 23\pi;   &= 1 \\
@@ -454,9 +453,7 @@ example using the \cs{pde} command;
 \hbox{\begin{minipage}[t]{0.35\textwidth}
 \setDE{notation=Lagrange}
 \noindent\setlength{\jot}{2.20em}
-\begin{verbatim}
-\setDE{notation=Lagrange}
-\end{verbatim}
+\centerline{\scriptsize\cs{setDE\{notation=\meta{Lagrange}\}}}
 \vspace{-1em}
 \begin{align*}
   \pde[y]   f_1         &= 1 \\
@@ -469,9 +466,7 @@ example using the \cs{pde} command;
 \hbox{\begin{minipage}[t]{0.34\textwidth}
 \setDE{notation=Leibniz} 
 \noindent\setlength{\jot}{0.70em}
-\begin{verbatim}
-\setDE{notation=Leibniz}
-\end{verbatim}
+\centerline{\scriptsize\cs{setDE\{notation=\meta{Leibniz}\}}}
 \vspace{-1em}
 \begin{align*}
   \pde[y]   f_1         &= 1 \\
@@ -485,9 +480,7 @@ example using the \cs{pde} command;
 \hbox{\begin{minipage}[t]{0.32\textwidth}
 \setDE{notation=Newton}
 \noindent\setlength{\jot}{2.20em}
-\begin{verbatim}
-\setDE{notation=Newton}
-\end{verbatim}
+\centerline{\scriptsize\cs{setDE\{notation=\meta{Newton}\}}}
 \vspace{-1em}
 \begin{align*}
   \pde[y]   f_1         &= 1 \\

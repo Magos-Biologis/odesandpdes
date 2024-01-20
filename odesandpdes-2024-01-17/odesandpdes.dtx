@@ -73,19 +73,19 @@ and the derived files           odesandpdes.ins,
 \endpostamble
 \usedir{tex/latex/odesandpdes}
 \generate{
-  \file{odesandpdes.sty}{\from{odesandpdes.dtx}{package}}
+  \file{\jobname.sty}{\from{\jobname.dtx}{package}}
 }
 %</install>
 %<install>\endbatchfile
 %<*internal>
 \usedir{source/latex/odesandpdes}
 \generate{
-  \file{odesandpdes.ins}{\from{odesandpdes.dtx}{install}}
+  \file{\jobname.ins}{\from{\jobname.dtx}{install}}
 }
 \nopreamble\nopostamble
 \usedir{doc/latex/odesandpdes}
 \generate{
-  \file{README.txt}{\from{odesandpdes.dtx}{readme}}
+  \file{README.txt}{\from{\jobname.dtx}{readme}}
 }
 \ifx\fmtname\nameofplainTeX
   \expandafter\endbatchfile
@@ -93,14 +93,11 @@ and the derived files           odesandpdes.ins,
   \expandafter\endgroup
 \fi
 %</internal>
-%<*driver>
-\ProvidesFile{odesandpdes.dtx}
-%</driver>
-%<package>\NeedsTeXFormat{LaTeX2e}
-%<package>\ProvidesPackage{odesandpdes}
-%<*package|driver>
-    [2024/01/20 v1.1.0 For streamlining ODE and PDE usage]
-%</package|driver>  
+%<*package>
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{odesandpdes}[2024/01/17 v1.0.0 For streamlining ODE and PDE usage]
+%
+%</package>  
 %<*driver>
 \PassOptionsToPackage{hidelinks, breaklinks= true,
 linkcolor = [rgb]{0,0,0}, urlcolor  = [rgb]{0,0,0}, citecolor = [rgb]{0,0,0},
@@ -124,40 +121,12 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 \CodelineIndex
 \RecordChanges
 \begin{document}
-    \DocInput{odesandpdes.dtx}
+    \DocInput{\jobname.dtx}
 \end{document}
 %</driver>
 % \fi
 %
-%
-%
-%
-% \CheckSum{0}
-%
-% \CharacterTable
-%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
-%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
-%   Digits        \0\1\2\3\4\5\6\7\8\9
-%   Exclamation   \!     Double quote  \"     Hash (number) \#
-%   Dollar        \$     Percent       \%     Ampersand     \&
-%   Acute accent  \'     Left paren    \(     Right paren   \)
-%   Asterisk      \*     Plus          \+     Comma         \,
-%   Minus         \-     Point         \.     Solidus       \/
-%   Colon         \:     Semicolon     \;     Less than     \<
-%   Equals        \=     Greater than  \>     Question mark \?
-%   Commercial at \@     Left bracket  \[     Backslash     \\
-%   Right bracket \]     Circumflex    \^     Underscore    \_
-%   Grave accent  \`     Left brace    \{     Vertical bar  \|
-%   Right brace   \}     Tilde         \~}
-%
-%
-% \changes{v1.0.0}{2024/01/17}{Initial version}
-%
-% \changes{v1.1.0}{2024/01/20}{Post-Release Optimization}
-%
-% \GetFileInfo{odesandpdes.dtx}
-%
-%
+% \CheckSum{618}
 %
 % \DoNotIndex{\def,\gdef,\global,\edef,\xdef,\long,\let,\futurelet}
 % \DoNotIndex{\ifnum,\ifdim,\iftrue,\iffalse,\ifx,\ifcase,\else,\or,\fi}
@@ -176,11 +145,29 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \DoNotIndex{\DeclareOptionX,\ExecuteOptionsX,\ProcessOptionsX}
 % \DoNotIndex{\m@ne,\z@,\@ne,\tw@,\p@,\@@tmp}
 %
+% \CharacterTable
+%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%   Digits        \0\1\2\3\4\5\6\7\8\9
+%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%   Dollar        \$     Percent       \%     Ampersand     \&
+%   Acute accent  \'     Left paren    \(     Right paren   \)
+%   Asterisk      \*     Plus          \+     Comma         \,
+%   Minus         \-     Point         \.     Solidus       \/
+%   Colon         \:     Semicolon     \;     Less than     \<
+%   Equals        \=     Greater than  \>     Question mark \?
+%   Commercial at \@     Left bracket  \[     Backslash     \\
+%   Right bracket \]     Circumflex    \^     Underscore    \_
+%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%   Right brace   \}     Tilde         \~}
+%
 %
 % \iffalse
 %<*documentation>
 % \fi
 %
+%
+% \GetFileInfo{\jobname.sty}
 %
 % \author{Anakin\\ \texttt{anakin@ruc.dk}}
 % \title{The \textsf{odesandpdes} package\thanks{This document 
@@ -189,6 +176,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \maketitle
 % 
+%
+% \changes{v1.0}{2024/01/17}{Initial version}
+%
 % \begin{abstract}
 % This package is the solution no one asked for, to a problem 
 % nobody had. Have you ever thought to yourself "wow, I sure do
@@ -276,15 +266,15 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % of differentials.
 % The quick functional break down of each element that comprises the macro;
 % \newline
-% \centerline{ \cs{ode}\meta{star}\oarg{variable}\string^\meta{degree}%
-% \marg{function} at\textvisiblespace\meta{position};}\vspace{1ex}
+% \centerline{ \cs{ode}\meta{star}\oarg{variable}\string^\meta{degree}
+% \marg{function}at\textvisiblespace\meta{position};}\vspace{1ex}
 % \par\hbox to \textwidth{\hss
 % \begin{tabular}{cl}\hline
 %    Argument &  Usage \\ \hline
 %    \oarg{variable} & The variable being derived \\ 
-%    \string^\meta{degree} & The order/degree of the derivative \\
+%    \meta{degree} & The order/degree of the derivative \\
 %    \marg{function} & The function being derived \\
-%    at\textvisiblespace\meta{point}; 
+%    \textvisiblespace at\textvisiblespace\meta{point}; 
 %       & Where the function is being derived \\ \hline
 % \end{tabular}\hss}\vspace{1ex}
 % All arguments are conditionally optional, only the function is
@@ -311,9 +301,6 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \begin{equation*} |\LagrODE[x] c = \LeibODE[x] c = \NewtODE[x] c |\quad
 % \Rightarrow\quad \LagrODE[x] c = \LeibODE[x] c = \NewtODE[x] c 
 % \end{equation*}
-% \begin{equation*} |\LagrPDE[x] c = \LeibPDE[x] c = \NewtPDE[x] c |\quad
-% \Rightarrow\quad \LagrPDE[x] c = \LeibPDE[x] c = \NewtPDE[x] c 
-% \end{equation*}
 % This also means that all these functions are identical in what arguments
 % they take.
 %
@@ -337,13 +324,13 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % While the \emph{mandatory} \marg{function} argument will be the function you
 % are deriving. 
 % Say you wish to indicate you are deriving $X(t)$, simple as writing 
-% \cs{ode[t]\{X\}}, however, its worth noting that $t$ is the default variable
-% so writing \cs{ode\{X\}} will produce identical results.
-% Hence \cs{ode[t]\{X\}=}\cs{ode\{X\}} will produce;
+% |\ode[t]{X}|, however, its worth noting that $t$ is the default variable
+% so writing |\ode{X}| will produce identical results.
+% Hence |\ode[t]{X} = \ode{X}| will produce;
 % \begin{equation*} |\ode[t]{X} =\ode{X}| \implies \ode[t]{X} = \ode{X} 
 % \end{equation*}
-%
-%
+%  
+% 
 % While the \marg{function} argument is mandatory using the 
 % non-starred command, using the starred varient
 % omits the need for the \marg{function} argument.
@@ -352,16 +339,17 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \begin{equation*} |\ode*[t]{X} =\ode*{X}| \implies \ode*[t]{X} = \ode*{X} 
 % \end{equation*}
 % Effectively one can rewrite the `bare-bones' display as:\par\vspace{1ex}
-% \par\centerline{
-% \cs{ode}\meta{star}\oarg{variable}\marg{ function}}
-%
+% \par\hbox to \textwidth{\hss
+% \cs{ode}\meta{star}\oarg{variable}\marg{ function}
+% \hss}
+% 
 % \subsubsection*{Degree of Derivative}
 % The previously shown stated section is something the reader has
 % likely encountered before, made themselves. This is where
 % this package begins to differentiate\footnote{Calculus Pun!} itself.
 % Consider:
 % \par\hbox to \textwidth{\hss
-% \cs{ode}\meta{star}\oarg{variable}\string^\meta{degree}\marg{function}
+% \cs{ode}\meta{star}\oarg{variable}$\uparrow$\meta{degree}\marg{function}
 % \hss}
 %
 % A feature of this family of commands, is that it can `\emph{easily}'
@@ -372,20 +360,19 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % As, often you would want add a higher degree very
 % quickly as opposed to \emph{after} defining the function. 
 %
-% \centerline{\cs{ode\string^2{f(x)}} as 
-% opposed to \cs{ode\{f(x)\}}\string^2}
+% \hbox to \textwidth{\hss
+% \cs{ode}|^2{f(x)}| as opposed to \cs{ode\{f(x)\}}|^2| \hss}
 %
 %
 % This was one of the main motivations of creating a package to begin with
 % as instead of needing, maybe, two personalized commands,
-% such as ``\cs{ddt\{f\}} and \cs{ddxx\{f\}}'', or ``\cs{dd\{x\}\{f\}} and
-% \cs{dd[2]\{x\}\{f\}}''.
+% such as ``|\ddt{f}| and |\ddxx{f}|'', or ``|\dd{x}{f}| and |\dd[2]{x}{f}|''.
 % One simply needs to treat the \cs{ode} macro itself as being raised
 % to a higher degree.
 % \begin{equation*} |\ode* \left(\ode{f} \right)=\ode^2{f} | 
 % \Rightarrow \ode* \left(\ode{f} \right)=\ode^2{f} 
 % \end{equation*}
-%
+% 
 %
 % \subsubsection*{Defining Where the Derivative is}
 %
@@ -394,10 +381,10 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % One could always make another macro, in what is no doubt an impressive
 % display of differential shortcuts.
 % \emph{Or}: \vspace{1ex}
-% \par\centerline{
-% \cs{ode}\meta{star}\oarg{variable}\string^\meta{degree}\marg{
-% function} at\textvisiblespace{}\meta{postion};
-% }
+% \par\hbox to \textwidth{\hss
+% \cs{ode}\meta{star}\oarg{variable}$\uparrow$\meta{degree}\marg{
+% function}\textvisiblespace{}at\textvisiblespace{}\meta{postion};
+% \hss}
 %
 % See, \TeX\ does something very interesting when it uses `\emph{glue}',
 % which is partially replicated by packages such as |TikZ|, where it will
@@ -417,7 +404,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \Rightarrow \ode[x]{c} at 0 = L;=1
 % \end{equation*}
 % Literally could not be easier.\footnote{My source is that I made it up}
-%
+% 
 %
 % Those reading til this point may have recalled that the first example
 % did not contain many braces.
@@ -440,7 +427,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \newpage
 % \section{Examples of use}\label{sec:examples}
-%
+% 
 % \stepcounter{subsection}
 %
 % \addcontentsline{toc}{subsection}{\thesubsection\quad Common Use Examples}
@@ -452,22 +439,20 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % There is a variety of spacing and bracketing to help highlight these features,
 % and will be shown in the following |verbatim| enviroment; 
 %
-% \noindent
+% 
 % \begin{minipage}{0.98\textwidth}
 % \begin{verbatim}
-% \begin{align*}
-% \ode A(x)      && \ode[x]{B(x)} && \ode^1 C(x)     && \ode[x]^5 {D(x)} \\
-% \ode* {E(x)}   && \ode*[x] F(x) && \ode*^2 {G(x)}  && \ode*[x]^6H(x)   \\
-% \pde[t] I(x)   && \pde[x] {J(x)}&& \pde[t]^3K(x)   && \pde[x]^7 {L(x)} \\
-% \pde*[t] {M(x)}&& \pde*[x]N(x)  && \pde*[t]^4 O(x) && \pde*[x]^8 P(x)
-% \end{align*}
+%\begin{align*}
+%\ode A(x)      && \ode[x]{B(x)} && \ode^1 C(x)     && \ode[x]^5 {D(x)} \\
+%\ode* {E(x)}   && \ode*[x] F(x) && \ode*^2 {G(x)}  && \ode*[x]^6H(x)   \\
+%\pde[t] I(x)   && \pde[x] {J(x)}&& \pde[t]^3K(x)   && \pde[x]^7 {L(x)} \\
+%\pde*[t] {M(x)}&& \pde*[x]N(x)  && \pde*[t]^4 O(x) && \pde*[x]^8 P(x)
+%\end{align*}
 % \end{verbatim}
 % \end{minipage}
-%
-% \noindent
+% 
 % \vbox{\centering
-% \centerline{\cs{setDE\{notation=\meta{Lagrange}\}} \emph{and/or}
-%  \cs{usepackage[notation=\meta{Lagrange}]\{odesandpdes\}}}
+% \hbox{\verb|\setDE{notation=Lagrange}| \emph{and/or} \verb|\usepackage[notation=Lagrange]{odesandpdes}|}
 % \fbox{\parbox{0.65\textwidth}{
 % \setDE{notation=Lagrange}
 % \begin{align*}
@@ -477,10 +462,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %   \pde*[t] {M(x)}&& \pde*[x]N(x)  && \pde*[t]^4 O(x) && \pde*[x]^8 P(x)
 % \end{align*}
 % }}}\vspace{1.25em}
-%
+% 
 % \vbox{\centering
-% \centerline{\cs{setDE\{notation=\meta{Leibniz}\}} \emph{and/or}
-%  \cs{usepackage[notation=\meta{Leibniz}]\{odesandpdes\}}}
+% \hbox{\verb|\setDE{notation=Leibniz}| \emph{and/or} \verb|\usepackage[notation=Leibniz]{odesandpdes}|}
 % \fbox{\parbox{0.65\textwidth}{
 % \setDE{notation=Leibniz}
 % \begin{align*}
@@ -490,10 +474,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %   \pde*[t] {M(x)}&& \pde*[x]N(x)  && \pde*[t]^4 O(x) && \pde*[x]^8 P(x)
 % \end{align*}
 % }}}\vspace{1.25em}
-%
+% 
 % \vbox{\centering
-% \centerline{\cs{setDE\{notation=\meta{Newton}\}} \emph{and/or}
-% \cs{usepackage[notation=\meta{Newton}]\{odesandpdes\}}}
+% \hbox{\verb|\setDE{notation=Newton}| \emph{and/or} \verb|\usepackage[notation=Newton]{odesandpdes}|}
 % \fbox{\parbox{0.65\textwidth}{
 % \setDE{notation=Newton}
 % \begin{align*}
@@ -503,10 +486,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %   \pde*[t] {M(x)}&& \pde*[x]N(x)  && \pde*[t]^4 O(x) && \pde*[x]^8 P(x)
 % \end{align*}
 % }}}
-%
+% 
 % \vbox{\centering
-% \centerline{\cs{setDE\{maxprimes=\meta{7}\}} \emph{and/or}
-% \cs{usepackage[maxprimes=\meta{7}]\{odesandpdes\}}}
+% \hbox{\verb|\setDE{maxprimes=7}| \emph{and/or} \verb|\usepackage[maxprimes=7]{odesandpdes}|}
 % \fbox{\parbox{0.65\textwidth}{
 % \setDE{notation=Lagrange,maxprimes=7}
 % \begin{align*}
@@ -734,21 +716,20 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % 
 %
+%\StopEventually{^^A
+%  \PrintChanges
+%	}
 %
 %
 % \iffalse
 %</documentation>
 % \fi
 %
-% \StopEventually{\PrintChanges}
-%
-%
 % ^^A************************************************ [odesandpdes.sty]
 % \newpage
 % \iffalse
 %<*package>
 % \fi
-%
 % \section{Package Implementation}
 % 
 % As a fair warning for anyone interested in the implementation
@@ -955,7 +936,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \subsection{Foundational macros}
 % \iffalse
 %<package>%% ----------------------------------------------------------------
-%<package>%% Main Package Macros
+%<package>%% Package Macros 
 %<package>%% ----------------------------------------------------------------
 % \fi
 %
@@ -1034,12 +1015,6 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % 
 % \subsubsection{The `Yoinkers'}
-% \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Package Yoinkers
-%<package>%% ----------------------------------------------------------------
-% \fi
-%
 % \begin{macro}{\@dest@r@rg}
 % \begin{macro}{\@de@ption@l@rg}\begin{macro}{\@de@exponent@rg}
 % \hspace{1em} Now a group of functions are needed for the processing
@@ -1086,8 +1061,6 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \end{macro}\end{macro}
 %
 % \begin{macro}{\@de@func@ther}\begin{macro}{\@de@func@Leib}
-% \changes{v1.0.1}{2024/01/20}{Reducing redundancy of Leib token
-% registry assignment}
 % \begin{macro}{\@de@func@Lagr}\begin{macro}{\@de@func@Newt}
 % 
 % \hspace{1em} As a consequence of the inherent differences in how
@@ -1105,7 +1078,8 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %    \begin{macrocode}
 \def\@de@func@ther#1{\expandafter\func@t@ks{#1}\relax
     \expandafter\@de@if@tpos}
-\def\@de@func@Leib{\expandafter\@de@ifbrace}
+\def\@de@func@Leib{\expandafter\func@t@ks{}\relax
+    \expandafter\@de@ifbrace}
 \let\@de@func@Lagr\@de@func@ther
 \let\@de@func@Newt\@de@func@ther
 %    \end{macrocode}
@@ -1125,12 +1099,6 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 %
 % \subsubsection{Macro `Checkpoints'}\label{sec:checkpoints}
-% \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Package if-elses
-%<package>%% ----------------------------------------------------------------
-% \fi
-%
 % \begin{macro}{\@de@ifst@r}
 % \begin{macro}{\@de@ifbr@ck}
 % \begin{macro}{\@de@ifexp@n}
@@ -1205,7 +1173,6 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \subsubsection{Variable Macronames}
 %
 % \begin{macro}{\@dest@rgument}
-%
 % \begin{macro}{\@deifst@rred}
 % \begin{macro}{\@dec@mpf@rm}
 %
@@ -1306,9 +1273,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % 
 %
 %
-% \begin{macro}{\@denext@rg}
-% \changes{v1.1.0}{2024/01/20}{Fixed comment spacing}
-% \begin{macro}{\@de@nextact}
+% \begin{macro}{\@denext@rg}\begin{macro}{\@de@nextact}
 % 
 % \hspace{1em} The first half of \cs{@denext@rg} ensures that a
 % space tokens does not get in the way of assignment,
@@ -1327,7 +1292,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % will be executed
 %    \begin{macrocode}
         \ifx\@detesttoken\@dew@tcht@k\relax  % if 
-            \let\@de@nextact\@de@tmpA\else   % ifn't
+            \let\@de@nextact\@de@tmpA\else       % ifn't
             \let\@de@nextact\@de@tmpB\fi\fi
     \@de@nextact}
 %    \end{macrocode}
@@ -1695,9 +1660,16 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \end{macro}
 % 
 % \iffalse
-\let\<\@desavedef
-\endinput
 %</package>
 % \fi
+%
+% 
+% \iffalse
+%<package>\let\<\@desavedef
+%<package>\endinput
+% \fi
+%
+%
+%
 %
 % \Finale

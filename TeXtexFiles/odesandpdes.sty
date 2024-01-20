@@ -55,7 +55,7 @@
     \let\@de@top=\atop%
     \let\@de@bove=\above}
 %% ----------------------------------------------------------------
-%% Package Macros
+%% Main Package Macros
 %% ----------------------------------------------------------------
 \def\d@@{\mathrm d}
 \let\d@l=\partial
@@ -81,6 +81,9 @@
 \def\NewtPDE{\let\@de@perat@r\d@l%
     \let\@dec@mm@nd\@de@not@Newton
     \@de@ifst@r}
+%% ----------------------------------------------------------------
+%% Package Yoinkers
+%% ----------------------------------------------------------------
 \def\@dest@r@rg*{\expandafter\@de@ifbr@ck}
 \def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}%
 \def\@de@exponent@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
@@ -93,6 +96,9 @@
 \let\@de@func@Lagr\@de@func@ther
 \let\@de@func@Newt\@de@func@ther
 \def\@de@tpos@rg#1;{\expandafter\@tpost@ks{#1}\relax \@de@tf@rm}
+%% ----------------------------------------------------------------
+%% Package if-elses
+%% ----------------------------------------------------------------
 \def\@de@ifst@r{\@deifch@r *
     {\@dest@rgument\@dest@red\@dest@r@rg}
     {\@dest@rgument\@den@st@r\@dest@r@rg*}}

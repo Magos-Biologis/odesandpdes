@@ -1015,7 +1015,10 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
     \@de@ifst@r}
 %    \end{macrocode}
 % \end{macro}\end{macro}\end{macro}
-% \begin{macro}{\LagrPDE}\begin{macro}{\LeibPDE}\begin{macro}{\NewtPDE}
+%
+% \begin{macro}{\LagrPDE}
+% \begin{macro}{\LeibPDE}
+% \begin{macro}{\NewtPDE}
 % As well as making a macro for each PDE version;
 %    \begin{macrocode}
 \def\LagrPDE{\let\@de@perat@r\d@l% sets the del
@@ -1028,6 +1031,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
     \let\@dec@mm@nd\@de@not@Newton
     \@de@ifst@r} 
 %    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
 %
 % In terms of usage, these are all the same command, the main
 % differences come from what the operator is defined as,
@@ -1036,7 +1042,6 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % They are however, given all caps for the \emph{ode} and \emph{pde}
 % in order to enhance visual clarity should one use them.
 % 
-% \end{macro}\end{macro}\end{macro}
 %
 % 
 % \subsubsection{The `Yoinkers'}
@@ -1189,7 +1194,8 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % Otherwise nothing happens.\footnotemark
 %    \begin{macrocode} 
 \def\@de@if@tpos{\@deifch@r a \@de@ttw@f@c \@dec@mpf@rm}
-\def\@de@ttw@f@c a#1 {\ifx t#1\expandafter\@de@tpos@rg\else
+\def\@de@ttw@f@c a#1 {\ifx t#1\expandafter
+    \@de@tpos@rg\else
     \@dec@mpf@rm a#1\fi}%
 %    \end{macrocode}
 %
@@ -1215,13 +1221,10 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %% ----------------------------------------------------------------
 % \fi
 % \subsubsection{Variable Macronames}
-%
 % \begin{macro}{\@dest@rgument}
-%
 % \begin{macro}{\@deifst@rred}
 % \begin{macro}{\@dec@mpf@rm}
-%
-% \hspace{1em}It becomes useful to be able to freely define which macro 
+% \hspace{1em} It becomes useful to be able to freely define which macro 
 % to be used when going through the option tree.
 % Subsequently, three macros are defined
 % to fufill that purpose. \cs{@dest@rgument} takes an argument and defines 
@@ -1263,7 +1266,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % However, it is important to understand at least a little bit for the
 % implementation of the \cs{@deifch@r} macro. 
 %
-% \begin{macro}{\@deifch@r}\begin{macro}{\@detesttoken}
+% \begin{macro}{\@deifch@r}\begin{macro}{\@det@stt@k}
+% \changes{v1.1.0}{2024/xxxxx}{Renamed \cs{@detesttoken}
+% to \cs{@det@stt@k}}
 % 
 % \begin{macro}{\@de@tmpA}\begin{macro}{\@de@tmpB}
 %
@@ -1299,7 +1304,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 \def\@deifch@r#1#2#3{%
     \let\@dew@tcht@k=#1\relax
     \def\@de@tmpA{#2} \def\@de@tmpB{#3}
-    \futurelet\@detesttoken\@denext@rg}
+    \futurelet\@det@stt@k\@denext@rg}
 %    \end{macrocode}
 % \hspace{1em} Using this \emph{enlightenment}, 
 % define the token representing an
@@ -1329,7 +1334,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % 
 %    \begin{macrocode}
 \def\@denext@rg{%
-    \ifx\@detesttoken\@sptoken\relax
+    \ifx\@det@stt@k\@sptoken\relax
         \let\@de@nextact\@desp@cegobbler\else
 %    \end{macrocode}
 % \hspace{1em} The second half of \cs{@denext@rg} is what does 
@@ -1338,7 +1343,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % in \cs{@de@tmpA} will be executed, otherwise, \cs{@de@tmpB} 
 % will be executed
 %    \begin{macrocode}
-        \ifx\@detesttoken\@dew@tcht@k\relax  % if 
+        \ifx\@det@stt@k\@dew@tcht@k\relax  % if 
             \let\@de@nextact\@de@tmpA\else   % ifn't
             \let\@de@nextact\@de@tmpB\fi\fi
     \@de@nextact}
@@ -1356,7 +1361,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % one space token on use.
 %    \begin{macrocode}
 \def\<{\@desp@cegobbler} 
-\expandafter\def\< {\futurelet\@detesttoken\@denext@rg}
+\expandafter\def\< {\futurelet\@det@stt@k\@denext@rg}
 %    \end{macrocode}
 % These three macros work together as a three point cycle discarding spaces
 % until the first non-space token is found, in which case the \cs{if}-\cs{else}

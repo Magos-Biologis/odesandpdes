@@ -112,7 +112,8 @@
     \@de@func@ther
     \@de@tilsp@ce}
 \def\@de@if@tpos{\@deifch@r a \@de@ttw@f@c \@dec@mpf@rm}
-\def\@de@ttw@f@c a#1 {\ifx t#1\expandafter\@de@tpos@rg\else
+\def\@de@ttw@f@c a#1 {\ifx t#1\expandafter
+    \@de@tpos@rg\else
     \@dec@mpf@rm a#1\fi}%
 %% ----------------------------------------------------------------
 %% Ancilliary Package Functions
@@ -125,17 +126,17 @@
 \def\@deifch@r#1#2#3{%
     \let\@dew@tcht@k=#1\relax
     \def\@de@tmpA{#2} \def\@de@tmpB{#3}
-    \futurelet\@detesttoken\@denext@rg}
+    \futurelet\@det@stt@k\@denext@rg}
 \def\@denext@rg{%
-    \ifx\@detesttoken\@sptoken\relax
+    \ifx\@det@stt@k\@sptoken\relax
         \let\@de@nextact\@desp@cegobbler\else
-        \ifx\@detesttoken\@dew@tcht@k\relax  % if
+        \ifx\@det@stt@k\@dew@tcht@k\relax  % if
             \let\@de@nextact\@de@tmpA\else   % ifn't
             \let\@de@nextact\@de@tmpB\fi\fi
     \@de@nextact}
 \let\@desavedef\<
 \def\<{\@desp@cegobbler}
-\expandafter\def\< {\futurelet\@detesttoken\@denext@rg}
+\expandafter\def\< {\futurelet\@det@stt@k\@denext@rg}
 \def\@de@tilsp@ce#1 {%
     \beginnext%
     \toks0={#1}

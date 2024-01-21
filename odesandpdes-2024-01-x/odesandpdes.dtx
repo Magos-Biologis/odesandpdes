@@ -125,6 +125,12 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 \RecordChanges
 \begin{document}
     \DocInput{odesandpdes.dtx}
+    \PrintChanges
+    \stepcounter{section}
+    \addcontentsline{toc}{section}{\thesection\quad Change History}
+    \PrintIndex
+    \stepcounter{section}
+    \addcontentsline{toc}{section}{\thesection\quad Index}
 \end{document}
 %</driver>
 % \fi
@@ -153,7 +159,11 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \changes{v1.0.0}{2024/01/17}{Initial version}
 %
-% \changes{v1.1.0}{2024/01/20}{Post-Release Optimization}
+% \changes{v1.0.1}{2024/01/20}{Post-Release Optimization}
+%
+% \changes{v1.0.2}{2024/01/20}{PDF tweaks and improvements}
+%
+% \changes{v1.1.0}{2024/xxxxx}{Changing Internal Macro naming conventions}
 %
 % \GetFileInfo{odesandpdes.dtx}
 %
@@ -165,14 +175,14 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \DoNotIndex{\bgroup,\egroup,\begingroup,\endgroup,\begin,\end}
 % \DoNotIndex{\relax,\endinput}
 % \DoNotIndex{\csname,\endcsname,\string,\the,\noexpand,\expandafter}
-% \DoNotIndex{\hbox,\raise,\lower,\vbox,\vtop,\vcenter,\left,\right}
+% ^^A \DoNotIndex{\hbox,\raise,\lower,\vbox,\vtop,\vcenter,\left,\right}
 % \DoNotIndex{\newcount,\newbox,\newtoks,\countdef}
 % \DoNotIndex{\above,\atop,\over}
 % \DoNotIndex{\cdot,\cdots,\dot,\dots,\prime}
-% \DoNotIndex{\displaystyle,\scriptstyle,\scriptscriptstyle}
-% \DoNotIndex{\advance,\count,\dimen}
+% ^^A \DoNotIndex{\displaystyle,\scriptstyle,\scriptscriptstyle}
+% ^^A \DoNotIndex{\advance,\count,\dimen}
 % \DoNotIndex{\baselineskip,\lineskip}
-% \DoNotIndex{\loop,\repeat}
+% \DoNotIndex{\loop,\repeat,\<}
 % \DoNotIndex{\DeclareOptionX,\ExecuteOptionsX,\ProcessOptionsX}
 % \DoNotIndex{\m@ne,\z@,\@ne,\tw@,\p@,\@@tmp}
 %
@@ -191,17 +201,19 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % 
 % \begin{abstract}
 % This package is the solution no one asked for, to a problem 
-% nobody had. Have you ever thought to yourself "wow, I sure do
-% dislike having to remember \emph{multiple} macros for my odes and pdes"
+% nobody had. Have you ever thought to yourself ``wow, I sure do
+% dislike having to remember \emph{multiple} macros for my 
+% odes (ordinary differential equation)
+% and pdes (partial differential equation)''
 % and the author of this package has to agree, wholeheartedly.
-% In the modern world of "tik-toking" and "family guy surfing", 
+% In the modern world of ``tik-toking'' and ``family guy surfing'', 
 % our brains have rotted beyond salvage for even basic levels of 
 % cognitive recall. This package aims to fix this, through two
 % macros that have been set to each have an identical form and 
 % function, with an emphasis on intuitive use.
-% Through setting options, the multiple
-% common notational style are easily
-% swapped between, all by a single option.
+% Thile there are multiple commonly used notational
+% style, they are easily
+% swapped between, all by a single option.\newline
 % \emph{You're welcome}.
 % \end{abstract}
 %
@@ -214,16 +226,15 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % 
 %
 % \newpage
-% \section*{My funny little ODE/PDE package}
-% \hspace{1em} Start by first having \verb|odesandpdes.sty| downloaded in an
-% accessible directory, or in the same directory as your 
-% overleaf main.tex, using it by inserting; 
+% \section{Usage}
+% Start by first having \verb|odesandpdes.sty| downloaded in an
+% accessible directory,\footnote{if the reader is using Overleaf, 
+% it should already be accessible.}
+% using it by inserting; 
 % \begin{center}
 % \cs{usepackage\oarg{options}\{odesandpdes\}}
 % \end{center}
-% into the preamble, Ideally after any font changing packages you use.
-%
-% \section{Usage}
+% into the preamble, Ideally \emph{after} any font changing packages you use.
 %
 % If the reader does not wish to be gradually introduced to the package
 % and its features, feel free to skip directly to section \ref{sec:examples}.
@@ -290,7 +301,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % All arguments are conditionally optional, only the function is
 % mandatory, but the command can forgo needing a function if a star is placed.
 %
-% \subsubsection*{Notation Style}
+% \subsubsection{Notation Style}
 %
 % \DescribeMacro{\LagrODE}
 % \DescribeMacro{\LeibODE}
@@ -318,7 +329,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % they take.
 %
 %
-% \subsubsection*{Variable and Function Arguments}
+% \subsubsection{Variable and Function Arguments}
 % \DescribeMacro{\ode}
 % \DescribeMacro{\ode*}
 % The most barebone form can be understood as:\par\noindent
@@ -355,7 +366,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \par\centerline{
 % \cs{ode}\meta{star}\oarg{variable}\marg{ function}}
 %
-% \subsubsection*{Degree of Derivative}
+% \subsubsection{Degree of Derivative}
 % The previously shown stated section is something the reader has
 % likely encountered before, made themselves. This is where
 % this package begins to differentiate\footnote{Calculus Pun!} itself.
@@ -387,7 +398,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \end{equation*}
 %
 %
-% \subsubsection*{Defining Where the Derivative is}
+% \subsubsection{Defining Where the Derivative is}
 %
 % Imagine you, as the reader, are trying to quickly and easily
 % write up the boundry conditions of your problem.
@@ -476,7 +487,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %   \pde[t] I(x)   && \pde[x] {J(x)}&& \pde[t]^3K(x)   && \pde[x]^7 {L(x)} \\
 %   \pde*[t] {M(x)}&& \pde*[x]N(x)  && \pde*[t]^4 O(x) && \pde*[x]^8 P(x)
 % \end{align*}
-% }}}\vspace{1.25em}
+% }}}\vspace{1.00em}
 %
 % \vbox{\centering
 % \centerline{\cs{setDE\{notation=\meta{Leibniz}\}} \emph{and/or}
@@ -489,7 +500,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %   \pde[t] I(x)   && \pde[x] {J(x)}&& \pde[t]^3K(x)   && \pde[x]^7 {L(x)} \\
 %   \pde*[t] {M(x)}&& \pde*[x]N(x)  && \pde*[t]^4 O(x) && \pde*[x]^8 P(x)
 % \end{align*}
-% }}}\vspace{1.25em}
+% }}}\vspace{1.00em}
 %
 % \vbox{\centering
 % \centerline{\cs{setDE\{notation=\meta{Newton}\}} \emph{and/or}
@@ -527,7 +538,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % 
 % 
-% \hspace{1em} Now, because the author is not an insane person, and went through the 
+% Now, because the author is not an insane person, and went through the 
 % effort of learning how TEX deconstructs text into constitute 
 % registries and boxes, the way any sane person might. When using 
 % a non-starred version of a command, after the function is defined, you can
@@ -672,7 +683,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % }
 %
 % \subsection{Prime Count Limits}
-% \hspace{1em} Because the Newton and Lagrange notation is procedural;
+% Because the Newton and Lagrange notation is procedural;
 % the only limit is your imagination, and also the fact that 
 % \TeX\ can only have something like 127 unplaced tokens at a time.\par
 % \hbox to \textwidth{\hss\cs{setDE\{maxprimes=69\}}\hss}
@@ -725,22 +736,14 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \end{minipage}}}
 %
 %
-% ^^A Truly beautiful.\par\vspace{1em}
-%
-% ^^A In the next semester I expect to try seeing if its possible to, given that you put multiple variable in the options, to procedurally generate partials that address separate variables sequatentially.
-% ^^A  \begin{equation*}
-%  ^^A     \frac{\partial^2}{\partial x \partial y}
-% ^^A  \end{equation*}
-%
-% 
-%
 %
 %
 % \iffalse
 %</documentation>
 % \fi
 %
-% \StopEventually{\PrintChanges}
+% \StopEventually{^^A
+% }
 %
 %
 % ^^A************************************************ [odesandpdes.sty]
@@ -769,9 +772,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \subsection{Set-up}
 % \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Package initialize
-%<package>%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+%% Package initialize
+%% ----------------------------------------------------------------
 % \fi
 %
 % 
@@ -803,7 +806,10 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \begin{macro}{\@dev@rb@x}\begin{macro}{\@defunb@x}\begin{macro}{\@deresb@x}
 % Reserving box registries for the purpose of collecting the components
-% together in \newline a coherent manner,
+% together in a coherent manner. Starting already here, one might
+% notice the fact that most macros stat with \cs{@de}, this helps
+% `protect' the definitions from being used accidentally, and makes the commands
+% easily identifiable.
 %    \begin{macrocode}
 \newbox\@dev@rb@x%
 \newbox\@defunb@x%
@@ -814,9 +820,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \subsubsection{Package Options}
 % \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Package Options
-%<package>%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+%% Package Options
+%% ----------------------------------------------------------------
 % \fi
 %
 %
@@ -906,10 +912,10 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 %
 %\iffalse
-%<package>\define@key[package]{@de}{notation}
-%<package>    {\def\@de@option{\csname @de@not@#1\endcsname}}
-%<package>\define@key[package]{@de}{maxprimes}
-%<package>    {\m@xm@rk=#1\advance\m@xm@rk\@ne}
+\define@key[package]{@de}{notation}
+    {\def\@de@option{\csname @de@not@#1\endcsname}}
+\define@key[package]{@de}{maxprimes}
+    {\m@xm@rk=#1\advance\m@xm@rk\@ne}
 %\fi
 %
 % \begin{macro}{\setDE}
@@ -954,9 +960,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \subsection{Foundational macros}
 % \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Main Package Macros
-%<package>%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+%% Main Package Macros
+%% ----------------------------------------------------------------
 % \fi
 %
 % \begin{macro}{\d@@}\begin{macro}{\d@l} 
@@ -1035,13 +1041,17 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % 
 % \subsubsection{The `Yoinkers'}
 % \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Package Yoinkers
-%<package>%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+%% Package Yoinkers
+%% ----------------------------------------------------------------
 % \fi
 %
 % \begin{macro}{\@dest@r@rg}
-% \begin{macro}{\@de@ption@l@rg}\begin{macro}{\@de@exponent@rg}
+% \begin{macro}{\@de@ption@l@rg}
+% \begin{macro}{\@de@exp@n@rg}
+% \changes{v1.1.0}{2024/xxxxx}{Renamed \cs{@de@exponent@rg} 
+% to \cs{@de@exp@n@rg} to stay in line with the esoteric naming
+% conventions of \TeX.}
 % \hspace{1em} Now a group of functions are needed for the processing
 % each of the major elements, the star (|*|), for whether to have a function 
 % parameter. The option (|[|), for determining the variable 
@@ -1067,9 +1077,10 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % If an exponent should appear, \cs{@de@exponent@rg} will yoink the |^|,
 % and the integer following it,
 %    \begin{macrocode}
-\def\@de@exponent@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
+\def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
 %    \end{macrocode}
 %
+% \end{macro}\end{macro}\end{macro}
 %
 %
 % \begin{macro}{\@dest@r@dy@ink}\begin{macro}{\@den@st@ry@ink}
@@ -1082,11 +1093,10 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 \def\@dest@r@dy@ink{\expandafter\@dec@mpf@rm}
 \def\@den@st@ry@ink{\expandafter\@dey@inkf@rm}
 %    \end{macrocode}
-% \end{macro}\end{macro}\end{macro}
 % \end{macro}\end{macro}
 %
 % \begin{macro}{\@de@func@ther}\begin{macro}{\@de@func@Leib}
-% \changes{v1.0.1}{2024/01/20}{Reducing redundancy of Leib token
+% \changes{v1.0.1}{2024/01/20}{Removing redundancy of Leib function token
 % registry assignment}
 % \begin{macro}{\@de@func@Lagr}\begin{macro}{\@de@func@Newt}
 % 
@@ -1126,9 +1136,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \subsubsection{Macro `Checkpoints'}\label{sec:checkpoints}
 % \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Package if-elses
-%<package>%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+%% Package if-elses
+%% ----------------------------------------------------------------
 % \fi
 %
 % \begin{macro}{\@de@ifst@r}
@@ -1150,8 +1160,8 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
     \@de@ption@l@rg 
     {\@de@ption@l@rg[t]}}
 \def\@de@ifexp@n{\@deifch@r ^ 
-    \@de@exponent@rg 
-    {\@de@exponent@rg^\@ne}}
+    \@de@exp@n@rg 
+    {\@de@exp@n@rg^\@ne}}
 %    \end{macrocode}
 % \begin{macro}{\@de@ifbrace}
 % \hspace{1em} \cs{@de@ifbrace} is a bit more special than the other \cs{@deif} 
@@ -1167,17 +1177,19 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \end{macro}\end{macro}\end{macro}\end{macro}
 %
 %
-% \begin{macro}{\@de@if@tpos}\begin{macro}{\@de@tDoubleCheck}
+% \begin{macro}{\@de@if@tpos}\begin{macro}{\@de@ttw@f@c}
+% \changes{v1.1.0}{2024/xxxxx}{Renamed \cs{@de@tDoubleCheck} 
+% to \cs{@de@ttw@f@c}.}
 % \hspace{1em} In the same way, there also exist a macro to check 
 % for the `|at|\textvisiblespace'. The main difference however,
 % is the follow up command that helps
 % \emph{robustify} \cs{@de@if@tpos}. This is done through absorbing all the 
 % tokens after the `|a|' until the next space token, if only 
-% a single token is absorbed, and that token is a `|t|', then success! Otherwise
-% nothing happens.\footnotemark
+% a single token is absorbed, and that token is a `|t|', then success!
+% Otherwise nothing happens.\footnotemark
 %    \begin{macrocode} 
-\def\@de@if@tpos{\@deifch@r a \@de@tDoubleCheck \@dec@mpf@rm}
-\def\@de@tDoubleCheck a#1 {\ifx t#1\expandafter\@de@tpos@rg\else
+\def\@de@if@tpos{\@deifch@r a \@de@ttw@f@c \@dec@mpf@rm}
+\def\@de@ttw@f@c a#1 {\ifx t#1\expandafter\@de@tpos@rg\else
     \@dec@mpf@rm a#1\fi}%
 %    \end{macrocode}
 %
@@ -1198,9 +1210,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 %
 % \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Ancilliary Package Functions
-%<package>%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+%% Ancilliary Package Functions
+%% ----------------------------------------------------------------
 % \fi
 % \subsubsection{Variable Macronames}
 %
@@ -1307,7 +1319,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 %
 % \begin{macro}{\@denext@rg}
-% \changes{v1.1.0}{2024/01/20}{Fixed comment spacing}
+% \changes{v1.1.0}{2024/xxxxx}{Fixed comment spacing}
 % \begin{macro}{\@de@nextact}
 % 
 % \hspace{1em} The first half of \cs{@denext@rg} ensures that a
@@ -1334,7 +1346,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \begin{macro}{\@desp@cegobbler}
 % \iffalse
-%<package>\let\@desavedef\<
+\let\@desavedef\<
 % \fi
 %
 % \hspace{1em} Ensuring that the space(s), explicit or implicit, trailing after
@@ -1398,9 +1410,9 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \subsection{Notational Morphology}
 % \iffalse
-%<package>%% ----------------------------------------------------------------
-%<package>%% Package Notations
-%<package>%% ----------------------------------------------------------------
+%% ----------------------------------------------------------------
+%% Package Notations
+%% ----------------------------------------------------------------
 % \fi
 % 
 % There is nothing particularly interesting about the methodology
@@ -1417,7 +1429,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % subsequently storing said arrangement into a \emph{box} which can 
 % then float to the top of the groupings like a message in a bottle.
 % 
-% \subsubsection*{Starred Forms}
+% \subsubsection{Starred Forms}
 % \begin{macro}{\st@r@d@Lagr}
 % Macro for Lagr+star
 %    \begin{macrocode}
@@ -1452,7 +1464,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 %
 %
-% \subsubsection*{Unstarred Forms}
+% \subsubsection{Unstarred Forms}
 % \begin{macro}{\n@st@r@Lagr}
 % Macro for Lagr
 %    \begin{macrocode}
@@ -1485,7 +1497,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %    \end{macrocode}
 % \end{macro}
 %
-% \subsubsection*{``At Position'' Forms}
+% \subsubsection{``At Position'' Forms}
 % \begin{macro}{\@de@t@Lagr}
 % Macro for Lagr at point
 %    \begin{macrocode}
@@ -1526,7 +1538,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 %
 %
-% \subsubsection*{Foundational forms}
+% \subsubsection{Foundational forms}
 %
 %
 % \begin{macro}{\m@kep@rtLagr}

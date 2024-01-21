@@ -87,7 +87,7 @@
 %% ----------------------------------------------------------------
 \def\@dest@r@rg*{\expandafter\@de@ifbr@ck}
 \def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}%
-\def\@de@exponent@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
+\def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
 \def\@dest@r@dy@ink{\expandafter\@dec@mpf@rm}
 \def\@den@st@ry@ink{\expandafter\@dey@inkf@rm}
 \def\@de@func@ther#1{\expandafter\func@t@ks{#1}\relax
@@ -106,13 +106,13 @@
     \@de@ption@l@rg
     {\@de@ption@l@rg[t]}}
 \def\@de@ifexp@n{\@deifch@r ^
-    \@de@exponent@rg
-    {\@de@exponent@rg^\@ne}}
+    \@de@exp@n@rg
+    {\@de@exp@n@rg^\@ne}}
 \def\@de@ifbrace{\@deifch@r \bgroup
     \@de@func@ther
     \@de@tilsp@ce}
-\def\@de@if@tpos{\@deifch@r a \@de@tDoubleCheck \@dec@mpf@rm}
-\def\@de@tDoubleCheck a#1 {\ifx t#1\expandafter\@de@tpos@rg\else
+\def\@de@if@tpos{\@deifch@r a \@de@ttw@f@c \@dec@mpf@rm}
+\def\@de@ttw@f@c a#1 {\ifx t#1\expandafter\@de@tpos@rg\else
     \@dec@mpf@rm a#1\fi}%
 %% ----------------------------------------------------------------
 %% Ancilliary Package Functions

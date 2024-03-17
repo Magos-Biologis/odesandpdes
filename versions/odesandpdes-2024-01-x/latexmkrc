@@ -1,0 +1,5 @@
+# Special latexmk makeindex line for .dtx files.
+$makeindex = "makeindex -s gind.ist %O -o %D %S";
+
+# Moves compiled sty to texmftree
+# $success_cmd = 'cp %Z/*.sty ~/Dropbox/texmf/tex/latex/odesandpdes';

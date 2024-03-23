@@ -2,5 +2,5 @@
 $makeindex = "makeindex -s gind.ist %O -o %D %S";
 
 # Moves compiled sty to texmftree
-# $success_cmd = 'cp %Z/*.sty ~/Dropbox/texmf/tex/latex/odesandpdes';
-$success_cmd = 'cp %Z/*.sty .';
+$success_cmd = 'cp %Z/*.sty ~/Dropbox/texmf/tex/latex/odesandpdes && cp %Z/*.sty .';
+# $success_cmd = 'cp %Z/*.sty .';

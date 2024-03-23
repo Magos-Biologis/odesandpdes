@@ -74,6 +74,7 @@ and the derived files           odesandpdes.ins,
 \usedir{tex/latex/odesandpdes}
 \generate{
   \file{odesandpdes.sty}{\from{odesandpdes.dtx}{package}}
+  \file{odesandpdes-test.sty}{\from{odesandpdes.dtx}{package,test}}
 }
 %</install>
 %<install>\endbatchfile
@@ -97,7 +98,8 @@ and the derived files           odesandpdes.ins,
 \ProvidesFile{odesandpdes.dtx}
 %</driver>
 %<package>\NeedsTeXFormat{LaTeX2e}
-%<package>\ProvidesPackage{odesandpdes}
+%<package&!test>\ProvidesPackage{odesandpdes}
+%<package&test>\ProvidesPackage{odesandpdes-test}
 %<*package|driver>
     [2024/01/20 v1.1.0 For streamlining ODE and PDE usage]
 %</package|driver>  
@@ -124,12 +126,10 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 \CodelineIndex
 \RecordChanges
 \begin{document}
-    \DocInput{odesandpdes.dtx}
-    % \PrintChanges
-    % \stepcounter{section}
+    \DocInput{\jobname.dtx}
+    % \newpage \PrintChanges \stepcounter{section}
     % \addcontentsline{toc}{section}{\thesection\quad Change History}
-    \PrintIndex
-    \stepcounter{section}
+    \newpage \PrintIndex \stepcounter{section}
     \addcontentsline{toc}{section}{\thesection\quad Index}
 \end{document}
 %</driver>
@@ -780,7 +780,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % Package options are difficult to deal with, so using the |xkeyval| package
 % alleviates much of the \emph{pain} associated with it,
 %    \begin{macrocode}
-\RequirePackage{xkeyval}    
+\RequirePackage{xkeyval}
 %    \end{macrocode}
 % 
 % \begin{macro}{\m@xm@rk}\begin{macro}{\exp@c@unt}\begin{macro}{\@detempv@l}

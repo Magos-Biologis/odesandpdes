@@ -19,6 +19,7 @@
 %% ----------------------------------------------------------------
 %% Package initialize
 %% ----------------------------------------------------------------
+\RequirePackage{etoolbox}
 \RequirePackage{xkeyval}
 \newcount\m@xm@rk%
 \newcount\exp@c@unt%
@@ -58,7 +59,7 @@
 %% ----------------------------------------------------------------
 %% Main Package Macros
 %% ----------------------------------------------------------------
-\def\d@@{\mathrm d}
+\mathchardef\d@@="4064 % Modified on the 12/03/2025
 \let\d@l=\partial
 \def\@dest@red{st@r@d}
 \def\@den@st@r{n@st@r}
@@ -86,7 +87,18 @@
 %% Package Yoinkers
 %% ----------------------------------------------------------------
 \def\@dest@r@rg*{\expandafter\@de@ifbr@ck}
-\def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}%
+
+
+
+% \def\@de@ption@l@rg[#1]{
+%     \forcecsvlist{}{#1}
+%     \expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n
+%     }%
+
+
+\def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}
+
+
 \def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
 \def\@dest@r@dy@ink{\expandafter\@dec@mpf@rm}
 \def\@den@st@ry@ink{\expandafter\@dey@inkf@rm}
@@ -105,6 +117,10 @@
 \def\@de@ifbr@ck{\@deifch@r [
     \@de@ption@l@rg
     {\@de@ption@l@rg[t]}}
+    % \@de@ifc@mm@rg
+% \def\@de@ifc@mm@rg{\@deifch@r ,
+%     \@de@ption@l@rg
+%     {\@de@ption@l@rg[t]}}
 \def\@de@ifexp@n{\@deifch@r ^
     \@de@exp@n@rg
     {\@de@exp@n@rg^\@ne}}
@@ -118,6 +134,28 @@
 %% ----------------------------------------------------------------
 %% Ancilliary Package Functions
 %% ----------------------------------------------------------------
+
+
+\def\@dem@kep@rtials[#1]#2{
+    \def\@devarlist##1{\expandafter\@depr@nt##1#1\@eol}%
+
+    \def\@depr@nt##1#1##2\@eol{%
+        \begingroup
+        \setbox0=\hbox{\@de@perat@r\mkern0.40mu##1\unskip}
+        \ifdim\wd0=0pt % This is clever, checking if there's anything inside the box so as to continue or nah
+            \endgroup
+        \else
+            \endgroup
+            \@de@perat@r\mkern0.40m\ignorespaces##1\unskip
+        \fi%
+    %
+        \ifx\@eol##2\@eol%
+        \else\@depr@nt##2\@eol%
+        \fi}%
+    \@devarlist[,]{#2}
+}
+
+
 \def\@dest@rgument#1{%
     \def\@deifst@rred{\csname @de#1y@ink\endcsname}%
     \def\@dec@mpf@rm{\csname#1@\@dec@mm@nd\endcsname}}

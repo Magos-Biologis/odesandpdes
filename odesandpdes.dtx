@@ -74,7 +74,7 @@ and the derived files           odesandpdes.ins,
 \usedir{tex/latex/odesandpdes}
 \generate{
   \file{odesandpdes.sty}{\from{odesandpdes.dtx}{package}}
-  \file{odesandpdes-test.sty}{\from{odesandpdes.dtx}{package,test}}
+^^A   \file{odesandpdes-test.sty}{\from{odesandpdes.dtx}{package,test}}
 }
 %</install>
 %<install>\endbatchfile
@@ -980,7 +980,8 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \hspace{1em} Creating protected macro definitions for increase in 
 % speed of processes,
 %    \begin{macrocode}
-\def\d@@{\mathrm d} 
+%<!test> \def\d@@{\mathrm d} 
+%<test> \mathchardef\d@@="4064 % Modified on the 12/03/2025
 \let\d@l=\partial   
 %    \end{macrocode}
 % \begin{macro}{\@dest@red}\begin{macro}{\@den@st@r}

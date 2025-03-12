@@ -10,3 +10,7 @@ $aux_dir = '.latex_build';
 
 
 $max_repeat=7;
+
+
+$failure_cmd = 'cp %Y/%R.log ./';
+$success_cmd = 'cp %Y/**.sty ./';

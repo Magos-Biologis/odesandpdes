@@ -1,14 +1,27 @@
 \documentclass{minimal}
 
+\usepackage{mathtools}
 \usepackage{odesandpdes-manual}
 
 \begin{document}
 
 Testing
 \begin{equation}
-    \ode f
+    \ode^1 f \quad \ode[x,y] f
 \end{equation}
 
+\setDE{notation=Lagrange,maxprimes=7}
+\begin{align*}
+\ode^1 f &&\ode^2 f &&\ode^3 f &&\ode^4 f &&
+\ode^5 f &&\ode^6 f &&\ode^7 f &&\ode^8 f &&\ode^9 f 
+\end{align*}
+
+\setDE{notation=Newton}
+\vspace{-1.5em}
+\begin{align*}
+\ode^1 f &&\ode^2 f &&\ode^3 f &&\ode^4 f &&
+\ode^5 f &&\ode^6 f &&\ode^7 f &&\ode^8 f &&\ode^9 f 
+\end{align*}
 
 
 

@@ -23,6 +23,7 @@
 \RequirePackage{etoolbox}
 \newcount\m@xm@rk%
 \newcount\exp@c@unt%
+% \exp@c@unt0
 \countdef\@detempv@l=255%
 \newtoks\v@rr@t@ks%
 \newtoks\func@t@ks%
@@ -87,8 +88,24 @@
 %% Package Yoinkers
 %% ----------------------------------------------------------------
 \def\@dest@r@rg*{\expandafter\@de@ifbr@ck}
-\def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}%
-\def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
+\def\@de@ption@l@rg[#1]{%
+    \def\@delist{}%
+    \forcsvlist{\global\advance\exp@c@unt\@ne\listadd\@delist}{#1}\relax%
+    \@de@ifexp@n%
+    }%
+% \def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}%
+\def\odeexpandlist{%
+    \renewcommand*{\do}[1]{ \@de@perat@r\mkern0.40mu ##1}%
+    \dolistloop{\@delist}%
+    }
+    % \renewcommand*{\@delist}{}
+    % \expandafter\expandafter\expandafter\v@rr@t@ks\expandafter{\dolistloop{\@delist}}
+\def\@de@exp@n@rg^#1{%
+    \expandafter\ifnum#1=1
+    \else
+    \advance\exp@c@unt#1\relax 
+    \fi
+    \@deifst@rred}
 \def\@dest@r@dy@ink{\expandafter\@dec@mpf@rm}
 \def\@den@st@ry@ink{\expandafter\@dey@inkf@rm}
 \def\@de@func@ther#1{\expandafter\func@t@ks{#1}\relax
@@ -108,7 +125,7 @@
     {\@de@ption@l@rg[t]}}
 \def\@de@ifexp@n{\@deifch@r ^
     \@de@exp@n@rg
-    {\@de@exp@n@rg^\@ne}}
+    {\@de@exp@n@rg^\z@}}
 \def\@de@ifbrace{\@deifch@r \bgroup
     \@de@func@ther
     \@de@tilsp@ce}
@@ -190,7 +207,8 @@
 \def\m@kep@rtLagr{\ifx\@de@perat@r\d@l\the\v@rr@t@ks\else\empty\fi}
 \def\b@se@Leib{%
     \setbox\@dev@rb@x\hbox{$
-        \@de@perat@r\mkern0.40mu\the\v@rr@t@ks^{\@deem@rex}$}%
+    \odeexpandlist^{\@deem@rex}$}%
+    % \@de@perat@r\mkern0.40mu\the\v@rr@t@ks^{\@deem@rex}$}%
     \setbox\@deresb@x\hbox{\kern0.5\p@%
         $\raise2\p@\box\@defunb@x\@de@ver\lower5\p@\box\@dev@rb@x$%
         \kern0.5\p@}%

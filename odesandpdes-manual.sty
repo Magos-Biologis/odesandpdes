@@ -92,12 +92,21 @@
 \def\@dest@r@rg*{\expandafter\@de@ifbr@ck}
 
 \def\@de@ption@l@rg[#1]{%
-    \@det@pexp@c@unt\z@%
-    \def\@delist{}%
-    \forcsvlist{\global\advance\@det@pexp@c@unt\@ne\relax\listadd\@delist}{#1}%\relax%
+    \@det@pexp@c@unt\z@\relax% To start with 0 each time
+    \let\@delist\empty% To start with a fresh list each time
+    \forcsvlist{%
+        \global\advance\@det@pexp@c@unt\@ne\relax%
+        \ifx\@de@perat@r\d@@\relax% To ensure it only works with pdes
+            \ifnum\@det@pexp@c@unt>1\relax%
+            \errmessage{Did you instead want to use pde?}%
+            \fi%
+        \fi%
+        \listadd\@delist}{#1}%\relax%
     \@de@ifexp@n%
     }%\global\advance\exp@c@unt\@ne
-    
+     
+    % % \global\advance\@det@pexp@c@unt\@ne \expandafter\v@rr@t@ks{#1}
+    % \else
     % \renewcommand*{\do}[1]{\global\advance\@det@pexp@c@unt\@ne\relax}%
     % \dolistloop{\@delist}%
     % \forlistloop{\@gobble}{\@delist}%\relax

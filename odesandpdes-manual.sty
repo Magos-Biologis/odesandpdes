@@ -14,7 +14,7 @@
 %% See http://www.latex-project.org/lppl.txt
 %% ----------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{odesandpdes-test}
+\ProvidesPackage{odesandpdes-manual}
     [2024/01/20 v1.1.0 For streamlining ODE and PDE usage]
 %% ----------------------------------------------------------------
 %% Package initialize
@@ -23,6 +23,8 @@
 \RequirePackage{etoolbox}
 \newcount\m@xm@rk%
 \newcount\exp@c@unt%
+\newcount\@det@pexp@c@unt%
+\newcount\@deb@texp@c@unt%
 % \exp@c@unt0
 \countdef\@detempv@l=255%
 \newtoks\v@rr@t@ks%
@@ -88,24 +90,28 @@
 %% Package Yoinkers
 %% ----------------------------------------------------------------
 \def\@dest@r@rg*{\expandafter\@de@ifbr@ck}
+
 \def\@de@ption@l@rg[#1]{%
+    \@det@pexp@c@unt\z@%
     \def\@delist{}%
-    \forcsvlist{\global\advance\exp@c@unt\@ne\listadd\@delist}{#1}\relax%
+    \forcsvlist{\global\advance\@det@pexp@c@unt\@ne\relax\listadd\@delist}{#1}%\relax%
     \@de@ifexp@n%
-    }%
+    }%\global\advance\exp@c@unt\@ne
+    
+    % \renewcommand*{\do}[1]{\global\advance\@det@pexp@c@unt\@ne\relax}%
+    % \dolistloop{\@delist}%
+    % \forlistloop{\@gobble}{\@delist}%\relax
 % \def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}%
+
 \def\odeexpandlist{%
-    \renewcommand*{\do}[1]{ \@de@perat@r\mkern0.40mu ##1}%
-    \dolistloop{\@delist}%
-    }
+    \forlistloop{\@de@perat@r\mkern0.40mu}{\@delist}%
+}
+
     % \renewcommand*{\@delist}{}
     % \expandafter\expandafter\expandafter\v@rr@t@ks\expandafter{\dolistloop{\@delist}}
-\def\@de@exp@n@rg^#1{%
-    \expandafter\ifnum#1=1
-    \else
-    \advance\exp@c@unt#1\relax 
-    \fi
-    \@deifst@rred}
+
+\def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@dech@ckexp@ \@deifst@rred}%\number\@det@pexp@c@unt \ \number\exp@c@unt\@deifst@rred}
+
 \def\@dest@r@dy@ink{\expandafter\@dec@mpf@rm}
 \def\@den@st@ry@ink{\expandafter\@dey@inkf@rm}
 \def\@de@func@ther#1{\expandafter\func@t@ks{#1}\relax
@@ -172,9 +178,11 @@
         _{\m@kep@rtLagr}}\mkern-\tw@ mu\left(\the\v@rr@t@ks\right)
         $}%
     \@derele@se}%
+
 \def\st@r@d@Leib{%
-    \setbox\@defunb@x\hbox{$\@de@perat@r^{\@deem@rex}$}%
+    \setbox\@defunb@x\hbox{$\@de@perat@r^{\@deem@rex\@det@pexp@c@unt}$}%
     \b@se@Leib}%
+
 \def\st@r@d@Newt{%
     \setbox\@dev@rb@x\hbox{$\the\v@rr@t@ks$} \b@se@Newt}%
 \def\n@st@r@Lagr{%
@@ -183,10 +191,12 @@
         ^{\mkern\@ne mu\@dedr@wm@rk\lagr@prime\lagr@prime\br@ced@xpon}
         _{\m@kep@rtLagr}}\mkern\m@ne mu$}%
     \@derele@se}%
+
 \def\n@st@r@Leib{%
     \setbox\@defunb@x\hbox{$
-        \@de@perat@r^{\@deem@rex}\mkern0.40mu\the\func@t@ks$}
+        \@de@perat@r^{\@deem@rex\@det@pexp@c@unt}\mkern0.40mu\the\func@t@ks$}
         \b@se@Leib}
+
 \def\n@st@r@Newt{%
     \setbox\@dev@rb@x\hbox{$\the\func@t@ks$} \b@se@Newt}%
 \def\@de@t@Lagr{%
@@ -205,14 +215,16 @@
         \n@st@r@Newt\mkern-\tw@ mu\left(\the\@tpost@ks\right)
         $}}%
 \def\m@kep@rtLagr{\ifx\@de@perat@r\d@l\the\v@rr@t@ks\else\empty\fi}
+
 \def\b@se@Leib{%
     \setbox\@dev@rb@x\hbox{$
-    \odeexpandlist^{\@deem@rex}$}%
-    % \@de@perat@r\mkern0.40mu\the\v@rr@t@ks^{\@deem@rex}$}%
+    \odeexpandlist^{\@deem@rex\@deb@texp@c@unt}$}%
     \setbox\@deresb@x\hbox{\kern0.5\p@%
-        $\raise2\p@\box\@defunb@x\@de@ver\lower5\p@\box\@dev@rb@x$%
-        \kern0.5\p@}%
+    $\raise2\p@\box\@defunb@x\@de@ver\lower5\p@\box\@dev@rb@x$%
+    \kern0.5\p@}%
     \@derele@se}%
+
+    % \@de@perat@r\mkern0.40mu\the\v@rr@t@ks^{\@deem@rex}$}%
 \def\b@se@Newt{%
     \setbox\@defunb@x\hbox{\vbox{\baselineskip=\z@\lineskip=\m@ne\p@%
         \@dedr@wm@rk\@de@ned@ts\@detw@d@ts\@denewt@nd@t}}%
@@ -222,7 +234,9 @@
     \@derele@se}
 \def\m@kep@rtNewt{\ifx\@de@perat@r\d@l\empty\fi}
 \def\lagr@prime{\mkern0.35mu\prime\global\advance\exp@c@unt\m@ne}
-\def\br@ced@xpon{\left(\the\exp@c@unt\right)}
+
+\def\br@ced@xpon{\left(\number\@det@pexp@c@unt\right)}
+
 \def\@detw@d@ts{\ifnum\exp@c@unt>\@ne%
         \advance\exp@c@unt-\tw@\hbox to 5\p@{\hss$\cdot\cdot$\hss}\fi}%
 \def\@de@ned@ts{\@detempv@l=\the\exp@c@unt%
@@ -230,10 +244,18 @@
         \advance\@detempv@l-\tw@\repeat%
     \ifnum\@detempv@l<\tw@%
         \advance\exp@c@unt\m@ne\hbox to 5\p@{\hss$\cdot$\hss}\fi}%
+
 \def\@denewt@nd@t{\hbox{\vbox{%
-    \hbox to 5\p@{\hss\raise\thr@@\p@\hbox{$\scriptstyle\@deem@rex$}\hss}%
+    \hbox to 5\p@{\hss\raise\thr@@\p@\hbox{$\scriptstyle\@deem@rex\exp@c@unt$}\hss}%
     \hbox to 5\p@{\hss\hbox{$\displaystyle\cdot$}\hss}}}}%
-\def\@deem@rex{\ifnum\tw@>\exp@c@unt\empty\else\the\exp@c@unt\fi}
+
+\def\@dech@ckexp@{ \ifnum2>\@det@pexp@c@unt%
+        \global\@det@pexp@c@unt=\exp@c@unt\relax
+        \global\@deb@texp@c@unt=\exp@c@unt\relax%
+    \fi%
+}
+
+\def\@deem@rex#1{ \ifnum\tw@>#1\empty\else\expandafter\number#1\fi }
 \def\@dedr@wm@rk#1#2#3{
     \ifnum\exp@c@unt<\m@xm@rk
         #1\@derepe@tdr@w#2\else

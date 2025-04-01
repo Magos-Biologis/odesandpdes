@@ -73,7 +73,7 @@ and the derived files           odesandpdes.ins,
 \endpostamble
 \usedir{tex/latex/odesandpdes}
 \generate{
-  \file{odesandpdes.sty}{\from{odesandpdes.dtx}{package,test}}
+  \file{odesandpdes.sty}{\from{odesandpdes.dtx}{package}}
 }
 %</install>
 %<install>\endbatchfile
@@ -97,8 +97,7 @@ and the derived files           odesandpdes.ins,
 \ProvidesFile{odesandpdes.dtx}
 %</driver>
 %<package>\NeedsTeXFormat{LaTeX2e}
-%<package&!test>\ProvidesPackage{odesandpdes}
-%<package&test>\ProvidesPackage{odesandpdes-test}
+%<package>\ProvidesPackage{odesandpdes}
 %<*package|driver>
     [2024/01/20 v1.1.0 For streamlining ODE and PDE usage]
 %</package|driver>  
@@ -162,7 +161,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \changes{v1.1.0}{2024/02/10}{Updating internal framework}
 %
-% \changes{v1.2.0}{2024/xx/xx}{Overhaul of internals}
+% \changes{v1.2.0}{2025/xx/xx}{Overhaul of internals}
 %
 % \GetFileInfo{odesandpdes.dtx}
 %
@@ -735,6 +734,11 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \end{minipage}}}
 %
 %
+% \subsection{Dynamic PDE Counting, with version 2.0}
+% One of the things that was lacking with this package, was the 
+% inability to cleanly deal with messy partials.
+% If I needed to derive something with respect to $x$ \emph{and} $y$,
+% well, I would need to do the command twice
 %
 %
 % \iffalse
@@ -779,20 +783,27 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % Package options are difficult to deal with, so using the |xkeyval| package
 % alleviates much of the \emph{pain} associated with it,
 %    \begin{macrocode}
-\RequirePackage{xkeyval}
-%<test>\RequirePackage{etoolbox}
+\RequirePackage{xkeyval}  %TODO Need to get keyval working instead
+\RequirePackage{etoolbox} %TODO Need to figure out how to uninclude this
 %    \end{macrocode}
 % 
 % \begin{macro}{\m@xm@rk}\begin{macro}{\exp@c@unt}\begin{macro}{\@detempv@l}
+% \begin{macro}{\@det@pexp@c@unt}
+% \changes{v1.2.0}{2025/04/01}{Split the exponent count into two counts}
+% \begin{macro}{\@deb@texp@c@unt} 
+% \changes{v1.2.0}{2025/04/01}{Split the exponent count into two counts}
 %
 % \hspace{1em} Being that there are a lot of minor calculations within the package
 % reserving registries for integer counts feels like a good idea
 %    \begin{macrocode}
 \newcount\m@xm@rk%
 \newcount\exp@c@unt%
+\newcount\@det@pexp@c@unt%
+\newcount\@deb@texp@c@unt%
 \countdef\@detempv@l=255%
 %    \end{macrocode}
 % \end{macro}\end{macro}\end{macro}
+% \end{macro}\end{macro}
 %
 % \begin{macro}{\v@rr@t@ks}\begin{macro}{\func@t@ks}\begin{macro}{\@tpost@ks}
 %
@@ -976,14 +987,13 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \fi
 %
 % \begin{macro}{\d@@}
-% \changes{v1.1.0}{2025/03/12}{Updated \cs{\d@@} to be a proper mathchar}
+% \changes{v1.1.1}{2025/03/12}{Updated \cs{\d@@} to be a proper mathchar}
 % \begin{macro}{\d@l} 
 %
 % \hspace{1em} Creating protected macro definitions for increase in 
 % speed of processes,
 %    \begin{macrocode}
-%<!test>\def\d@@{\mathrm d} 
-%<test>\mathchardef\d@@="4064 % Modified on the 12/03/2025
+\mathchardef\d@@="4064 
 \let\d@l=\partial   
 %    \end{macrocode}
 % \begin{macro}{\@dest@red}\begin{macro}{\@den@st@r}
@@ -1068,10 +1078,14 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \begin{macro}{\@dest@r@rg}
 % \begin{macro}{\@de@ption@l@rg}
+% \changes{v2.0.0}{2025/04/01}{Overhauled the optional internals for ease of pdes}
 % \begin{macro}{\@de@exp@n@rg}
 % \changes{v1.1.0}{2024/xx/xx}{Renamed \cs{@de@exponent@rg} 
 % to \cs{@de@exp@n@rg} to stay in line with the esoteric naming
 % conventions of \TeX.}
+% \changes{v1.2.0}{2025/04/01}{Changed the exponent function to use 
+% the newly implimented \cs{\@dech@ckexp@}}
+%
 % \hspace{1em} Now a group of functions are needed for the processing
 % each of the major elements, the star (|*|), for whether to have a function 
 % parameter. The option (|[|), for determining the variable 
@@ -1091,13 +1105,15 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % For an optional argument, \cs{@de@option@l@rg} will yoink the argument,
 % as well as the surrounding brackets,
 %    \begin{macrocode}
-\def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}% 
+\def\@de@ption@l@rg[#1]{%
+    \@det@pexp@c@unt\z@\relax% To start with 0 each time
+    \expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}% 
 %    \end{macrocode}
 %
 % If an exponent should appear, \cs{@de@exponent@rg} will yoink the |^|,
 % and the integer following it,
 %    \begin{macrocode}
-\def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
+\def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@dech@ckexp@ \@deifst@rred}
 %    \end{macrocode}
 %
 % \end{macro}\end{macro}\end{macro}
@@ -1486,11 +1502,12 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 %
 % \begin{macro}{\st@r@d@Leib}
+% \changes{v2.0.0}{2025/04/01}{Changed to work with new count \cs{\@det@pexp@c@unt}}
 %
 %  Macro for Leib+star
 %    \begin{macrocode}
 \def\st@r@d@Leib{%
-    \setbox\@defunb@x\hbox{$\@de@perat@r^{\@deem@rex}$}%
+    \setbox\@defunb@x\hbox{$\@de@perat@r^{\@deem@rex\@det@pexp@c@unt}$}%
     \b@se@Leib}%
 %    \end{macrocode}
 % \end{macro}
@@ -1524,12 +1541,13 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 %
 % \begin{macro}{\n@st@r@Leib}
+% \changes{v2.0.0}{2025/04/01}{Changed to work with new count \cs{\@det@pexp@c@unt}}
 %
 %  Macro for Leib
 %    \begin{macrocode}
 \def\n@st@r@Leib{%  
     \setbox\@defunb@x\hbox{$
-        \@de@perat@r^{\@deem@rex}\mkern0.40mu\the\func@t@ks$} 
+        \@de@perat@r^{\@deem@rex\@det@pexp@c@unt}\mkern0.40mu\the\func@t@ks$}
         \b@se@Leib}
 %    \end{macrocode}
 % \end{macro}
@@ -1593,11 +1611,14 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \end{macro}
 %
 % \begin{macro}{\b@se@Leib}
+% \changes{v2.0.0}{2025/04/01}{Changed to work with new count \cs{\@det@pexp@c@unt}}
+%
 % Macro for the base Leibniz form
 %    \begin{macrocode}
 \def\b@se@Leib{%
     \setbox\@dev@rb@x\hbox{$
-        \@de@perat@r\mkern0.40mu\the\v@rr@t@ks^{\@deem@rex}$}%
+        \@de@perat@r\mkern0.40mu\the\v@rr@t@ks^{\@deem@rex\@deb@texp@c@unt}$}%
+    %\odeexpandlist^{\@deem@rex\@deb@texp@c@unt}$}%
     \setbox\@deresb@x\hbox{\kern0.5\p@%
         $\raise2\p@\box\@defunb@x\@de@ver\lower5\p@\box\@dev@rb@x$%
         \kern0.5\p@}%
@@ -1644,6 +1665,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \begin{macro}{\lagr@prime}
 % \begin{macro}{\br@ced@xpon}
+% \changes{v2.0.0}{2025/04/01}{Changed to work with new count \cs{\@det@pexp@c@unt}}
 %
 % \hspace{1em} The macro for the Lagrangian prime is very straightforward
 % each time \cs{lagr@prime} is used, a prime mark will be placed,
@@ -1657,7 +1679,7 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % markings, \cs{br@ced@xpon} will be used instead, which will display 
 % the general form of an integer enclosed by parenthesis.
 %    \begin{macrocode}
-\def\br@ced@xpon{\left(\the\exp@c@unt\right)}
+\def\br@ced@xpon{\left(\number\@det@pexp@c@unt\right)}
 %    \end{macrocode}
 %
 % \end{macro}
@@ -1698,24 +1720,26 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 % \end{macro}
 %
 % \begin{macro}{\@denewt@nd@t}
+% \changes{v2.0.0}{2025/04/01}{Changed to work with new count \cs{\@det@pexp@c@unt}}
 %
 % \hspace{1em} The generalized form of the the Newtonian derivative notation is 
 % is just a glorified fraction, with a dot as the denominator, and a number
 % as the numerator.
 %    \begin{macrocode}
 \def\@denewt@nd@t{\hbox{\vbox{%
-    \hbox to 5\p@{\hss\raise\thr@@\p@\hbox{$\scriptstyle\@deem@rex$}\hss}%
+    \hbox to 5\p@{\hss\raise\thr@@\p@\hbox{$\scriptstyle\@deem@rex\exp@c@unt$}\hss}%
     \hbox to 5\p@{\hss\hbox{$\displaystyle\cdot$}\hss}}}}%
 %    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\@deem@rex}
+% \changes{v2.0.0}{2025/04/01}{Changed to accomodate an argument}
 %
 % For the Leibniz notation, there is no reason to display the exponent
 % should it be an integer value less than 2, therefor, any 
 % exponent count less than two will be replaced with \cs{empty}.
 %    \begin{macrocode}
-\def\@deem@rex{\ifnum\tw@>\exp@c@unt\empty\else\the\exp@c@unt\fi}
+\def\@deem@rex#1{ \ifnum\tw@>#1\empty\else\expandafter\number#1\fi }
 %    \end{macrocode}
 %
 % \begin{macro}{\@dedr@wm@rk}
@@ -1737,7 +1761,6 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %    \end{macrocode}
 %
 % \begin{macro}{\@derepe@tdr@w}
-%
 % While \cs{@derepe@tdr@w} is what provides the 
 % conditional looping enviroment to ensure the markings are placed;
 %    \begin{macrocode}
@@ -1746,6 +1769,19 @@ pdfauthor={Anakin}, pdftitle={The odesandpdes package}}{hyperref}
 %
 % \end{macro}
 % \end{macro}
+% \end{macro}
+%
+%
+% \begin{macro}{\@derele@se}
+% \changes{v1.2.0}{2025/04/01}{Added discerning function for copying}
+%
+%    \begin{macrocode}
+\def\@dech@ckexp@{ \ifnum2>\@det@pexp@c@unt%
+        \global\@det@pexp@c@unt=\exp@c@unt\relax
+        \global\@deb@texp@c@unt=\exp@c@unt\relax%
+    \fi%
+}
+%    \end{macrocode}
 % \end{macro}
 %
 % \begin{macro}{\@derele@se}

@@ -4,7 +4,7 @@
 %%
 %% The original source files were:
 %%
-%% odesandpdes.dtx  (with options: `package,test')
+%% odesandpdes.dtx  (with options: `package')
 %% ----------------------------------------------------------------
 %% odesandpdes --- A package for the streamlining of the use of
 %% odes and pdes in mathematical texts typset by LaTeX
@@ -14,15 +14,17 @@
 %% See http://www.latex-project.org/lppl.txt
 %% ----------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{odesandpdes-test}
+\ProvidesPackage{odesandpdes}
     [2024/01/20 v1.1.0 For streamlining ODE and PDE usage]
 %% ----------------------------------------------------------------
 %% Package initialize
 %% ----------------------------------------------------------------
-\RequirePackage{xkeyval}
-\RequirePackage{etoolbox}
+\RequirePackage{xkeyval}  %TODO Need to get keyval working instead
+\RequirePackage{etoolbox} %TODO Need to figure out how to uninclude this
 \newcount\m@xm@rk%
 \newcount\exp@c@unt%
+\newcount\@det@pexp@c@unt%
+\newcount\@deb@texp@c@unt%
 \countdef\@detempv@l=255%
 \newtoks\v@rr@t@ks%
 \newtoks\func@t@ks%
@@ -59,7 +61,7 @@
 %% ----------------------------------------------------------------
 %% Main Package Macros
 %% ----------------------------------------------------------------
-\mathchardef\d@@="4064 % Modified on the 12/03/2025
+\mathchardef\d@@="4064
 \let\d@l=\partial
 \def\@dest@red{st@r@d}
 \def\@den@st@r{n@st@r}
@@ -87,8 +89,10 @@
 %% Package Yoinkers
 %% ----------------------------------------------------------------
 \def\@dest@r@rg*{\expandafter\@de@ifbr@ck}
-\def\@de@ption@l@rg[#1]{\expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}%
-\def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@deifst@rred}
+\def\@de@ption@l@rg[#1]{%
+    \@det@pexp@c@unt\z@\relax% To start with 0 each time
+    \expandafter\v@rr@t@ks{#1}\relax \@de@ifexp@n}%
+\def\@de@exp@n@rg^#1{\exp@c@unt#1\relax \@dech@ckexp@ \@deifst@rred}
 \def\@dest@r@dy@ink{\expandafter\@dec@mpf@rm}
 \def\@den@st@ry@ink{\expandafter\@dey@inkf@rm}
 \def\@de@func@ther#1{\expandafter\func@t@ks{#1}\relax
@@ -156,7 +160,7 @@
         $}%
     \@derele@se}%
 \def\st@r@d@Leib{%
-    \setbox\@defunb@x\hbox{$\@de@perat@r^{\@deem@rex}$}%
+    \setbox\@defunb@x\hbox{$\@de@perat@r^{\@deem@rex\@det@pexp@c@unt}$}%
     \b@se@Leib}%
 \def\st@r@d@Newt{%
     \setbox\@dev@rb@x\hbox{$\the\v@rr@t@ks$} \b@se@Newt}%
@@ -168,7 +172,7 @@
     \@derele@se}%
 \def\n@st@r@Leib{%
     \setbox\@defunb@x\hbox{$
-        \@de@perat@r^{\@deem@rex}\mkern0.40mu\the\func@t@ks$}
+        \@de@perat@r^{\@deem@rex\@det@pexp@c@unt}\mkern0.40mu\the\func@t@ks$}
         \b@se@Leib}
 \def\n@st@r@Newt{%
     \setbox\@dev@rb@x\hbox{$\the\func@t@ks$} \b@se@Newt}%
@@ -190,7 +194,8 @@
 \def\m@kep@rtLagr{\ifx\@de@perat@r\d@l\the\v@rr@t@ks\else\empty\fi}
 \def\b@se@Leib{%
     \setbox\@dev@rb@x\hbox{$
-        \@de@perat@r\mkern0.40mu\the\v@rr@t@ks^{\@deem@rex}$}%
+        \@de@perat@r\mkern0.40mu\the\v@rr@t@ks^{\@deem@rex\@deb@texp@c@unt}$}%
+    %\odeexpandlist^{\@deem@rex\@deb@texp@c@unt}$}%
     \setbox\@deresb@x\hbox{\kern0.5\p@%
         $\raise2\p@\box\@defunb@x\@de@ver\lower5\p@\box\@dev@rb@x$%
         \kern0.5\p@}%
@@ -204,7 +209,7 @@
     \@derele@se}
 \def\m@kep@rtNewt{\ifx\@de@perat@r\d@l\empty\fi}
 \def\lagr@prime{\mkern0.35mu\prime\global\advance\exp@c@unt\m@ne}
-\def\br@ced@xpon{\left(\the\exp@c@unt\right)}
+\def\br@ced@xpon{\left(\number\@det@pexp@c@unt\right)}
 \def\@detw@d@ts{\ifnum\exp@c@unt>\@ne%
         \advance\exp@c@unt-\tw@\hbox to 5\p@{\hss$\cdot\cdot$\hss}\fi}%
 \def\@de@ned@ts{\@detempv@l=\the\exp@c@unt%
@@ -213,14 +218,19 @@
     \ifnum\@detempv@l<\tw@%
         \advance\exp@c@unt\m@ne\hbox to 5\p@{\hss$\cdot$\hss}\fi}%
 \def\@denewt@nd@t{\hbox{\vbox{%
-    \hbox to 5\p@{\hss\raise\thr@@\p@\hbox{$\scriptstyle\@deem@rex$}\hss}%
+    \hbox to 5\p@{\hss\raise\thr@@\p@\hbox{$\scriptstyle\@deem@rex\exp@c@unt$}\hss}%
     \hbox to 5\p@{\hss\hbox{$\displaystyle\cdot$}\hss}}}}%
-\def\@deem@rex{\ifnum\tw@>\exp@c@unt\empty\else\the\exp@c@unt\fi}
+\def\@deem@rex#1{ \ifnum\tw@>#1\empty\else\expandafter\number#1\fi }
 \def\@dedr@wm@rk#1#2#3{
     \ifnum\exp@c@unt<\m@xm@rk
         #1\@derepe@tdr@w#2\else
         #3\fi}
 \def\@derepe@tdr@w#1{\loop\ifnum\exp@c@unt>\z@#1\repeat}
+\def\@dech@ckexp@{ \ifnum2>\@det@pexp@c@unt%
+        \global\@det@pexp@c@unt=\exp@c@unt\relax
+        \global\@deb@texp@c@unt=\exp@c@unt\relax%
+    \fi%
+}
 \def\@derele@se{\noexpand{\box\@deresb@x}}
 \let\<\@desavedef
 %% File: odesandpdes.dtx
